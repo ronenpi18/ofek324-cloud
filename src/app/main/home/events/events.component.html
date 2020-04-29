@@ -143,16 +143,17 @@
 
             <div class="content" fxLayout="row wrap">
                 <div class="activities">
-                    <div class="activity" fxLayout="row" fxLayoutAlign="start start"
+                    <div class="activity" fxLayout="column" fxLayoutAlign="right right"
                          *ngFor="let activity of timeline.activities">
-                        <button mat-mini-fab disabled style="color:white; margin-right: 10px; background-color: #449FDB; ">29</button>
+<!--                        <button mat-mini-fab disabled style="color:white; margin-right: 10px; background-color: #449FDB; ">{{activity.time}}</button>-->
 
-                        <div fxLayout="column">
-                            <div>
-                                <span class="username">{{activity.user.name}}</span>
-                                <span class="message"> {{activity.message}}</span>
+                        <div fxLayout="column" dir="rtl">
+                            <div dir="rtl">
+                                <span class="username" dir="rtl">{{activity.user.name}}</span>
+                                <span class="username" dir="rtl"> פרסם כי: </span>
                             </div>
-                            <span class="time secondary-text">{{activity.time}}</span>
+                                <span class="message" dir="rtl"> {{activity.message}} </span>
+                            <span class="time" dir="rtl">יתקיים ב: {{activity.time}}</span>
                         </div>
                     </div>
                 </div>

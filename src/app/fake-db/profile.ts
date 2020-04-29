@@ -4,67 +4,53 @@ export class ProfileFakeDb
         activities: [
             {
                 'user'   : {
-                    'name'  : 'Alice Freeman',
+                    'name'  : 'IaaS',
                     'avatar': 'assets/images/avatars/alice.jpg'
                 },
-                'message': 'started following you.',
-                'time'   : '13 mins. ago'
-            },
-            {
+                'message': 'מיגרציות מיגרציות מיגרציות מיגרציות מיגרציות מיגרציות שרתי זמזם הכסף',
+                'time'   : new Date()
+            },            {
                 'user'   : {
-                    'name'  : 'Andrew Green',
-                    'avatar': 'assets/images/avatars/andrew.jpg'
+                    'name'  : 'IaaS',
+                    'avatar': 'assets/images/avatars/alice.jpg'
                 },
-                'message': 'sent you a message.',
-                'time'   : 'June 10,2018'
-            },
-            {
+                'message': 'מיגרציות שרתי זמזם הכסף',
+                'time'   : new Date()
+            },            {
                 'user'   : {
-                    'name'  : 'Garry Newman',
-                    'avatar': 'assets/images/avatars/garry.jpg'
+                    'name'  : 'IaaS',
+                    'avatar': 'assets/images/avatars/alice.jpg'
                 },
-                'message': 'shared a public post with your group.',
-                'time'   : 'June 9,2018'
-            },
-            {
+                'message': 'מיגרציות מיגרציותמיגרציות מיגרציות מיגרציות שרתי זמזם הכסף',
+                'time'   : new Date()
+            },            {
                 'user'   : {
-                    'name'  : 'Carl Henderson',
-                    'avatar': 'assets/images/avatars/carl.jpg'
+                    'name'  : 'IaaS',
+                    'avatar': 'assets/images/avatars/alice.jpg'
                 },
-                'message': 'wants to play Fallout Shelter with you.',
-                'time'   : 'June 8,2018'
-            },
-            {
+                'message': 'מיגרציות שרתי זמזם הכסף',
+                'time'   : new Date()
+            },            {
                 'user'   : {
-                    'name'  : 'Jane Dean',
-                    'avatar': 'assets/images/avatars/jane.jpg'
+                    'name'  : 'IaaS',
+                    'avatar': 'assets/images/avatars/alice.jpg'
                 },
-                'message': 'started following you.',
-                'time'   : 'June 7,2018'
-            },
-            {
+                'message': 'מיגרציות שרתי זמזם הכסף',
+                'time'   : new Date()
+            },            {
                 'user'   : {
-                    'name'  : 'Juan Carpenter',
-                    'avatar': 'assets/images/avatars/james.jpg'
+                    'name'  : 'network security for real no doute',
+                    'avatar': 'assets/images/avatars/alice.jpg'
                 },
-                'message': 'sent you a message.',
-                'time'   : 'June 6,2018'
-            },
-            {
+                'message': 'מיגרציות שרתי זמזם הכסף',
+                'time'   : new Date()
+            },            {
                 'user'   : {
-                    'name'  : 'Judith Burton',
-                    'avatar': 'assets/images/avatars/joyce.jpg'
+                    'name'  : 'IaaS',
+                    'avatar': 'assets/images/avatars/alice.jpg'
                 },
-                'message': 'shared a photo with you.',
-                'time'   : 'June 5,2018'
-            },
-            {
-                'user'   : {
-                    'name'  : 'Vincent Munoz',
-                    'avatar': 'assets/images/avatars/vincent.jpg'
-                },
-                'message': 'shared a photo with you.',
-                'time'   : 'June 4,2018'
+                'message': 'מיגרציות שרתי זמזם הכסף',
+                'time'   : new Date()
             }
         ],
         posts     : [
