@@ -10,13 +10,13 @@ import { MatSelectModule } from '@angular/material/select';
 import { FuseSharedModule } from '@fuse/shared.module';
 
 import { AcademyCoursesComponent } from 'app/main/apps/academy/courses/courses.component';
-import { AcademyCourseComponent } from 'app/main/shared/service-catalog/course/course.component';
+import { AcademyCourseComponent } from 'app/main/shared/catalog-handler/course/course.component';
 import { AcademyCoursesService } from 'app/main/apps/academy/courses.service';
 import { AcademyCourseService } from 'app/main/apps/academy/course.service';
 import {FuseSidebarModule, FuseWidgetModule} from '@fuse/components';
 import {MatListModule} from "@angular/material/list";
-import {StepsCourseModule} from "../../shared/service-catalog/course/steps-course.module";
-import {ServiceCatalogModule} from "../../shared/service-catalog/highlighted-services/service-catalog.module";
+import {StepsCourseModule} from "../../shared/catalog-handler/course/steps-course.module";
+import {ServiceCatalogModule} from "../../shared/catalog-handler/highlighted-services/service-catalog.module";
 import {HomeService} from "../../home/home.service";
 import {MatDividerModule} from "@angular/material/divider";
 import {MatMenuModule} from "@angular/material/menu";

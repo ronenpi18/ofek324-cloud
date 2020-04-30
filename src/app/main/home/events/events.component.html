@@ -4,6 +4,7 @@
 
         <div class="profile-box add-post">
 
+            <app-service-requests></app-service-requests>
 <!--            <div class="form" fxFlex>-->
 
 <!--                <textarea placeholder="Write something.."></textarea>-->
@@ -147,7 +148,7 @@
                          *ngFor="let activity of timeline.activities">
 <!--                        <button mat-mini-fab disabled style="color:white; margin-right: 10px; background-color: #449FDB; ">{{activity.time}}</button>-->
 
-                        <div fxLayout="column" dir="rtl">
+                        <div fxLayout="column" dir="rtl" >
                             <div dir="rtl">
                                 <span class="username" dir="rtl">{{activity.user.name}}</span>
                                 <span class="username" dir="rtl"> פרסם כי: </span>
