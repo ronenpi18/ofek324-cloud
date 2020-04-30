@@ -10,10 +10,20 @@ import { MatSelectModule } from '@angular/material/select';
 import { FuseSharedModule } from '@fuse/shared.module';
 
 import { AcademyCoursesComponent } from 'app/main/apps/academy/courses/courses.component';
-import { AcademyCourseComponent } from 'app/main/apps/academy/course/course.component';
+import { AcademyCourseComponent } from 'app/main/shared/service-catalog/course/course.component';
 import { AcademyCoursesService } from 'app/main/apps/academy/courses.service';
 import { AcademyCourseService } from 'app/main/apps/academy/course.service';
-import { FuseSidebarModule } from '@fuse/components';
+import {FuseSidebarModule, FuseWidgetModule} from '@fuse/components';
+import {MatListModule} from "@angular/material/list";
+import {StepsCourseModule} from "../../shared/service-catalog/course/steps-course.module";
+import {ServiceCatalogModule} from "../../shared/service-catalog/highlighted-services/service-catalog.module";
+import {HomeService} from "../../home/home.service";
+import {MatDividerModule} from "@angular/material/divider";
+import {MatMenuModule} from "@angular/material/menu";
+import {MatTableModule} from "@angular/material/table";
+import {MatTabsModule} from "@angular/material/tabs";
+import {NgxChartsModule} from "@swimlane/ngx-charts";
+import {CommonModule} from "@angular/common";
 
 const routes = [
     {
@@ -39,25 +49,23 @@ const routes = [
 @NgModule({
     declarations: [
         AcademyCoursesComponent,
-        AcademyCourseComponent
     ],
-    imports     : [
+    imports: [
+        CommonModule,
         RouterModule.forChild(routes),
-
-        MatButtonModule,
-        MatFormFieldModule,
         MatIconModule,
-        MatInputModule,
-        MatSelectModule,
-
         FuseSharedModule,
-        FuseSidebarModule
+        FuseSidebarModule,
+        FuseWidgetModule,
+
+        StepsCourseModule,
+        ServiceCatalogModule
     ],
-    providers   : [
+    providers:[
+        HomeService,
         AcademyCoursesService,
         AcademyCourseService
     ]
 })
-export class AcademyModule
-{
+export class AcademyModule {
 }

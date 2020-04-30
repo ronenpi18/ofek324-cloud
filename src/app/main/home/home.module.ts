@@ -16,15 +16,20 @@ import {FuseSharedModule} from "@fuse/shared.module";
 import {FuseSidebarModule, FuseWidgetModule} from "@fuse/components";
 import {MatListModule} from "@angular/material/list";
 import {EventsTimelineComponent} from "./events/events.component";
+import {AcademyCoursesService} from "../apps/academy/courses.service";
+import {AcademyCourseService} from "../apps/academy/course.service";
+import {AcademyCoursesComponent} from "../apps/academy/courses/courses.component";
+import {ServiceCatalogModule} from "../shared/service-catalog/highlighted-services/service-catalog.module";
 
 const routes: Routes = [
     {
         path     : '**',
         component: HomeComponent,
         resolve  : {
-            data: HomeService
+            academy: AcademyCoursesService,
+            timeline: HomeService
         }
-    }
+    },
 ];
 
 
@@ -36,22 +41,17 @@ const routes: Routes = [
     imports: [
         CommonModule,
         RouterModule.forChild(routes),
-        MatButtonModule,
-        MatDividerModule,
-        MatFormFieldModule,
         MatIconModule,
-        MatMenuModule,
-        MatSelectModule,
-        MatTableModule,
-        MatTabsModule,
-        NgxChartsModule,
         FuseSharedModule,
         FuseSidebarModule,
         FuseWidgetModule,
-        MatListModule
+
+        ServiceCatalogModule,
     ],
     providers:[
-        HomeService
+        HomeService,
+        AcademyCoursesService,
+        AcademyCourseService
     ]
 })
 export class HomeModule { }

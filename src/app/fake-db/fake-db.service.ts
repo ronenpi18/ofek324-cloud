@@ -44,7 +44,7 @@ export class FakeDbService implements InMemoryDbService
             'academy-course'    : AcademyFakeDb.course,
 
             //home
-            'home-services':HomeFakeDb.highlightedServices,
+            'home-services':HomeFakeDb.highlightedServices, //not used
             // Mail
             'mail-mails'  : MailFakeDb.mails,
             'mail-folders': MailFakeDb.folders,
