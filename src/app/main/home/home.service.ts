@@ -41,8 +41,6 @@ export class HomeService implements Resolve<any>
         return new Promise((resolve, reject) => {
 
             Promise.all([
-                this.getCategories(),
-                this.getCourses(),
                 this.getTimeline()
             ]).then(
                 () => {
@@ -53,37 +51,6 @@ export class HomeService implements Resolve<any>
         });
     }
 
-    /**
-     * Get projects
-     *
-     * @returns {Promise<any>}
-     */
-    getCategories(): Promise<any>
-    {
-        return new Promise((resolve, reject) => {
-            this._httpClient.get('api/academy-categories')
-                .subscribe((response: any) => {
-                    this.onCategoriesChanged.next(response);
-                    resolve(response);
-                }, reject);
-        });
-    }
-
-    /**
-     * Get courses
-     *
-     * @returns {Promise<any>}
-     */
-    getCourses(): Promise<any>
-    {
-        return new Promise((resolve, reject) => {
-            this._httpClient.get('api/home-services')
-                .subscribe((response: any) => {
-                    this.onCoursesChanged.next(response);
-                    resolve(response);
-                }, reject);
-        });
-    }
 
     getTimeline(): Promise<any[]>
     {

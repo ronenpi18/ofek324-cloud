@@ -17,102 +17,11 @@
         </div>
         <mat-icon>cloud</mat-icon>
     </div>
-    <div id="highlighted-services" class="page-layout simple">
-        <!-- CONTENT -->
-        <div class="content p-24">
+        <events-timeline></events-timeline>
 
-            <div fxLayout="column" fxLayoutAlign="right">
+    <app-highlighted-services [isHome]=true [amountOfItems]=9></app-highlighted-services>
 
-                <div class="filters" fxLayout="column" fxLayoutAlign="right right"
-                     fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-between center">
-
-                    <!--                    <mat-form-field appearance="outline" floatLabel="always" class="course-search">-->
-                    <!--                        <mat-label>Search for a course</mat-label>-->
-                    <!--                        <input matInput placeholder="Enter a keyword..."-->
-                    <!--                               [(ngModel)]="searchTerm"-->
-                    <!--                               (input)="filterCoursesByTerm()">-->
-                    <!--                    </mat-form-field>-->
-
-                    <!--                    <mat-form-field appearance="outline" class="category-selector">-->
-                    <!--                        <mat-label>Category</mat-label>-->
-                    <!--                        <mat-select [(ngModel)]="currentCategory"-->
-                    <!--                                    (selectionChange)="filterCoursesByCategory()">-->
-                    <!--                            <mat-option [value]="'all'">-->
-                    <!--                                All-->
-                    <!--                            </mat-option>-->
-                    <!--                            <mat-option *ngFor="let category of categories" [value]="category.value">-->
-                    <!--                                {{ category.label }}-->
-                    <!--                            </mat-option>-->
-                    <!--                        </mat-select>-->
-                    <!--                    </mat-form-field>-->
-
-                    <mat-list>
-                        <mat-list-item>Highlighted Services:</mat-list-item>
-                        <mat-divider></mat-divider>
-                    </mat-list>
-                    <!--                <button mat-stroked-button style="background: #c2cbe2 !important;" color="accent">View All</button>-->
-                    <button mat-flat-button color="accent"
-                            [routerLink]="'/apps/academy'">
-                        View All
-                    </button>
-
-
-                </div>
-
-
-                <div class="courses" fxLayout="row wrap" fxLayoutAlign="center">
-
-                    <div class="course" *ngFor="let course of filteredCourses" fxFlex="100" fxFlex.gt-xs="50"
-                         fxFlex.gt-sm="33" [ngClass]="course.category" >
-
-                        <div class="course-content" fxLayout="column" fxFlex="1 1 auto">
-
-                            <div class="header" fxLayout="row" fxLayoutAlign="center center"
-                                 [ngClass]="course.category + '-bg'">
-
-                                <div class="category" fxFlex>
-                                    {{course.category}}
-                                </div>
-
-                                <div class="length" fxLayout="row" fxLayoutAlign="center center">
-                                    <mat-icon class="length-icon s-20">access_time</mat-icon>
-                                    <div class="min">{{course.length}} min</div>
-                                </div>
-
-                            </div>
-
-                            <div class="content" fxLayout="column" fxLayoutAlign="center center" fxFlex="1 1 auto">
-                                <div class="h1">{{course.title}}</div>
-                                <div class="updated">Updated {{course.updated}}</div>
-                            </div>
-
-                            <div class="footer" fxLayout="row" fxLayoutAlign="center center">
-                                <button mat-button color="accent"
-                                        [routerLink]="'/apps/academy/courses/' + course.id + '/' + course.slug">
-                                    התחל
-                                </button>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="no-courses" *ngIf="filteredCourses.length === 0">
-                        No courses found!
-                    </div>
-
-                    <div class="more-btn">
-
-                    </div>
-                </div>
-                <mat-divider></mat-divider>
-
-            </div>
-<!--            <profile-timeline></profile-timeline>-->
-            <events-timeline></events-timeline>
-        </div>
-        <!-- / CONTENT -->
-
+    <div class="content p-24">
     </div>
 
 

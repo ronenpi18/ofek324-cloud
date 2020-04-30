@@ -8,6 +8,20 @@ export class AcademyFakeDb
             'category': 'IaaS',
             'length'  : 7,
             'updated' : 'Jun 28, 2017'
+        },        {
+            'id'      : '15459251a6d6b397565',
+            'title'   : 'יצירת Linux VM',
+            'slug'    : 'basics-of-angular',
+            'category': 'IaaS',
+            'length'  : 7,
+            'updated' : 'Jun 28, 2017'
+        },        {
+            'id'      : '15459251a6d6b397565',
+            'title'   : 'יצירת Linux VM',
+            'slug'    : 'basics-of-angular',
+            'category': 'IaaS',
+            'length'  : 7,
+            'updated' : 'Jun 28, 2017'
         },
         {
             'id'      : '154588a0864d2881124',
