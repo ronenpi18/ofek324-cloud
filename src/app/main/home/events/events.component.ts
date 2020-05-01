@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
+import {Component, Input, OnDestroy, OnInit, ViewEncapsulation} from '@angular/core';
 
 import { fuseAnimations } from '@fuse/animations';
 
@@ -16,6 +16,7 @@ import {HomeService} from "../home.service";
 export class EventsTimelineComponent implements OnInit, OnDestroy
 {
     timeline: any;
+    @Input() amountOfItems?: number;
 
     // Private
     private _unsubscribeAll: Subject<any>;
@@ -45,7 +46,14 @@ export class EventsTimelineComponent implements OnInit, OnDestroy
         this._profileService.timelineOnChanged
             .pipe(takeUntil(this._unsubscribeAll))
             .subscribe(timeline => {
-                this.timeline = timeline;
+                if(this.amountOfItems) {
+                    let activitiesArr = timeline.activities.slice(0,this.amountOfItems)
+                    timeline.activities = activitiesArr
+                    this.timeline = timeline
+                }
+                else {
+                    this.timeline = timeline;
+                }
             });
     }
 
