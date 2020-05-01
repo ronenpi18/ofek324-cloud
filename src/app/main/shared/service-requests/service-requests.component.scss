@@ -16,6 +16,7 @@ app-service-requests {
             height: 420px;
             .header {
 
+                place-content: center space-around !important;
                 .search-wrapper {
                     width: 100%;
                     max-width: 480px;
