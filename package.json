@@ -1,7 +1,7 @@
 {
     "name": "fuse",
     "version": "8.0.0",
-    "license": "https://themeforest.net/licenses/terms/regular",
+    "license": "",
     "scripts": {
         "ng": "ng",
         "start": "ng serve --open",
