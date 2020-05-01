@@ -1,25 +1,25 @@
-import { Component, ElementRef, OnDestroy, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { DataSource } from '@angular/cdk/collections';
-import { BehaviorSubject, fromEvent, merge, Observable, Subject } from 'rxjs';
-import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
-
-import { fuseAnimations } from '@fuse/animations';
-import { FuseUtils } from '@fuse/utils';
-
-import { takeUntil } from 'rxjs/internal/operators';
-import {RequestsService} from "../../../shared/service-requests/requests.service";
+import {Component, ElementRef, Input, OnDestroy, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
+import {MatPaginator} from "@angular/material/paginator";
+import {MatSort} from "@angular/material/sort";
+import {BehaviorSubject, fromEvent, merge, Observable, Subject} from "rxjs";
+import {debounceTime, distinctUntilChanged, map, takeUntil} from "rxjs/operators";
+import {DataSource} from "@angular/cdk/collections";
+import {FuseUtils} from "../../../../@fuse/utils";
+import {RequestsService} from "./requests.service";
+import {fuseAnimations} from "../../../../@fuse/animations";
 
 @Component({
-    selector     : 'e-commerce-orders',
-    templateUrl  : './orders.component.html',
-    styleUrls    : ['./orders.component.scss'],
-    animations   : fuseAnimations,
-    encapsulation: ViewEncapsulation.None
+  selector: 'app-service-requests',
+  templateUrl: './service-requests.component.html',
+  styleUrls: ['./service-requests.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    animations   : fuseAnimations
 })
-export class EcommerceOrdersComponent implements OnInit, OnDestroy
+
+export class ServiceRequestsComponent implements OnInit, OnDestroy
 {
+    @Input() isHome: boolean;
+
     dataSource: FilesDataSource | null;
     displayedColumns = ['id', 'reference', 'customer', 'total', 'payment', 'status', 'date'];
 

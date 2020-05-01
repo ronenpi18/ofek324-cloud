@@ -3,23 +3,18 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import {RouterModule, Routes} from "@angular/router";
 import {HomeService} from "./home.service";
-import {MatButtonModule} from "@angular/material/button";
-import {MatDividerModule} from "@angular/material/divider";
-import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatIconModule} from "@angular/material/icon";
-import {MatMenuModule} from "@angular/material/menu";
-import {MatSelectModule} from "@angular/material/select";
-import {MatTableModule} from "@angular/material/table";
-import {MatTabsModule} from "@angular/material/tabs";
-import {NgxChartsModule} from "@swimlane/ngx-charts";
 import {FuseSharedModule} from "@fuse/shared.module";
 import {FuseSidebarModule, FuseWidgetModule} from "@fuse/components";
-import {MatListModule} from "@angular/material/list";
 import {EventsTimelineComponent} from "./events/events.component";
 import {AcademyCoursesService} from "../apps/academy/courses.service";
 import {AcademyCourseService} from "../apps/academy/course.service";
-import {AcademyCoursesComponent} from "../apps/academy/courses/courses.component";
-import {ServiceCatalogModule} from "../shared/service-catalog/highlighted-services/service-catalog.module";
+import {ServiceCatalogModule} from "../shared/catalog-handler/highlighted-services/service-catalog.module";
+import {ServiceRequestsModule} from "../shared/service-requests/service-requests.module";
+import {RequestsService} from "../shared/service-requests/requests.service";
+import {EcommerceOrderService} from "../apps/e-commerce/order/order.service";
+import {EcommerceProductService} from "../apps/e-commerce/product/product.service";
+import {EcommerceProductsService} from "../apps/e-commerce/products/products.service";
 
 const routes: Routes = [
     {
@@ -27,7 +22,8 @@ const routes: Routes = [
         component: HomeComponent,
         resolve  : {
             academy: AcademyCoursesService,
-            timeline: HomeService
+            timeline: HomeService,
+            recent: RequestsService
         }
     },
 ];
@@ -36,7 +32,8 @@ const routes: Routes = [
 @NgModule({
     declarations: [
         HomeComponent,
-        EventsTimelineComponent
+        EventsTimelineComponent,
+
     ],
     imports: [
         CommonModule,
@@ -47,11 +44,12 @@ const routes: Routes = [
         FuseWidgetModule,
 
         ServiceCatalogModule,
+        ServiceRequestsModule,
     ],
     providers:[
         HomeService,
-        AcademyCoursesService,
-        AcademyCourseService
+        // AcademyCoursesService,
+        // AcademyCourseService,
     ]
 })
 export class HomeModule { }

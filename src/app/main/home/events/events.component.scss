@@ -3,7 +3,7 @@
 events-timeline {
 
     #events-timeline {
-        max-width: 1200px;
+        //max-width: 1200px;
 
         .events-timeline-content {
 
@@ -189,6 +189,8 @@ events-timeline {
             .latest-activity {
 
                 .content {
+                    overflow: auto;
+                    height: 450px !important;
 
                     .activities {
 

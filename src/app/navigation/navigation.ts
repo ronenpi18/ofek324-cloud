@@ -21,6 +21,12 @@ export const navigation: FuseNavigation[] = [
                 type     : 'item',
                 icon     : 'school',
                 url      : '/apps/academy'
+            },{
+                id        : 'orders',
+                title     : 'Orders',
+                type      : 'item',
+                icon     : 'shopping_cart',
+                url       : '/apps/e-commerce/orders',
             },
             {
                 id       : 'dashboards',

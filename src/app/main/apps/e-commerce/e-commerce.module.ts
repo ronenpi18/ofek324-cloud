@@ -23,10 +23,12 @@ import { EcommerceProductsComponent } from 'app/main/apps/e-commerce/products/pr
 import { EcommerceProductsService } from 'app/main/apps/e-commerce/products/products.service';
 import { EcommerceProductComponent } from 'app/main/apps/e-commerce/product/product.component';
 import { EcommerceProductService } from 'app/main/apps/e-commerce/product/product.service';
-import { EcommerceOrdersComponent } from 'app/main/apps/e-commerce/orders/orders.component';
 import { EcommerceOrdersService } from 'app/main/apps/e-commerce/orders/orders.service';
 import { EcommerceOrderComponent } from 'app/main/apps/e-commerce/order/order.component';
 import { EcommerceOrderService } from 'app/main/apps/e-commerce/order/order.service';
+import {ServiceRequestsModule} from "../../shared/service-requests/service-requests.module";
+import {ServiceRequestsComponent} from "../../shared/service-requests/service-requests.component";
+import {RequestsService} from "../../shared/service-requests/requests.service";
 
 const routes: Routes = [
     {
@@ -50,31 +52,32 @@ const routes: Routes = [
             data: EcommerceProductService
         }
     },
-    {
-        path     : 'orders',
-        component: EcommerceOrdersComponent,
-        resolve  : {
-            data: EcommerceOrdersService
-        }
-    },
-    {
-        path     : 'orders/:id',
-        component: EcommerceOrderComponent,
-        resolve  : {
-            data: EcommerceOrderService
-        }
-    }
+    // {
+    //     path     : 'orders',
+    //     component: EcommerceOrdersComponent,
+    //     resolve  : {
+    //         data: EcommerceOrdersService
+    //     }
+    // },
+    // {
+    //     path     : 'orders/:id',
+    //     component: EcommerceOrderComponent,
+    //     resolve  : {
+    //         data: EcommerceOrderService
+    //     }
+    // }
 ];
 
 @NgModule({
     declarations: [
         EcommerceProductsComponent,
         EcommerceProductComponent,
-        EcommerceOrdersComponent,
-        EcommerceOrderComponent
+        // EcommerceOrdersComponent,
+        // EcommerceOrderComponent
     ],
     imports     : [
         RouterModule.forChild(routes),
+        ServiceRequestsModule,
 
         MatButtonModule,
         MatChipsModule,
@@ -101,8 +104,9 @@ const routes: Routes = [
     providers   : [
         EcommerceProductsService,
         EcommerceProductService,
-        EcommerceOrdersService,
-        EcommerceOrderService
+        // EcommerceOrdersService,
+        EcommerceOrderService,
+        RequestsService
     ]
 })
 export class EcommerceModule

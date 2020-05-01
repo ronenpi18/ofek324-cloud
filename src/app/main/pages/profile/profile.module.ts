@@ -12,6 +12,8 @@ import { ProfileComponent } from 'app/main/pages/profile/profile.component';
 import { ProfileTimelineComponent } from 'app/main/pages/profile/tabs/timeline/timeline.component';
 import { ProfileAboutComponent } from 'app/main/pages/profile/tabs/about/about.component';
 import { ProfilePhotosVideosComponent } from 'app/main/pages/profile/tabs/photos-videos/photos-videos.component';
+import {ServiceRequestsModule} from "../../shared/service-requests/service-requests.module";
+import {RequestsService} from "../../shared/service-requests/requests.service";
 
 
 const routes = [
@@ -19,7 +21,8 @@ const routes = [
         path     : 'profile',
         component: ProfileComponent,
         resolve  : {
-            profile: ProfileService
+            profile: ProfileService,
+            asas: RequestsService
         }
     }
 ];
@@ -31,7 +34,7 @@ const routes = [
         ProfileAboutComponent,
         ProfilePhotosVideosComponent
     ],
-    imports     : [
+    imports: [
         RouterModule.forChild(routes),
 
         MatButtonModule,
@@ -39,10 +42,12 @@ const routes = [
         MatIconModule,
         MatTabsModule,
 
-        FuseSharedModule
+        FuseSharedModule,
+        ServiceRequestsModule
     ],
     providers   : [
-        ProfileService
+        ProfileService,
+        RequestsService
     ]
 })
 export class ProfileModule
