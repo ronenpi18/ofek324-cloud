@@ -1,17 +1,22 @@
+// import { Injectable } from '@angular/core';
+//
+// @Injectable({
+//   providedIn: 'root'
+// })
+// export class RequestsService {
+//
+//   constructor() { }
+// }
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
-import {BehaviorSubject, Observable} from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable()
-export class HomeService implements Resolve<any>
+export class RequestsService implements Resolve<any>
 {
-    projects: any[];
-    timeline: any;
-    widgets: any[];
-    onCategoriesChanged: BehaviorSubject<any>;
-    onCoursesChanged: BehaviorSubject<any>;
-    timelineOnChanged: BehaviorSubject<any>;
+    orders: any[];
+    onOrdersChanged: BehaviorSubject<any>;
 
     /**
      * Constructor
@@ -22,10 +27,8 @@ export class HomeService implements Resolve<any>
         private _httpClient: HttpClient
     )
     {
-        this.onCategoriesChanged = new BehaviorSubject({});
-        this.onCoursesChanged = new BehaviorSubject({});
-        this.timelineOnChanged = new BehaviorSubject({});
-
+        // Set the defaults
+        this.onOrdersChanged = new BehaviorSubject({});
     }
 
     /**
@@ -37,11 +40,10 @@ export class HomeService implements Resolve<any>
      */
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> | Promise<any> | any
     {
-
         return new Promise((resolve, reject) => {
 
             Promise.all([
-                this.getTimeline()
+                this.getOrders()
             ]).then(
                 () => {
                     resolve();
@@ -51,16 +53,19 @@ export class HomeService implements Resolve<any>
         });
     }
 
-
-    getTimeline(): Promise<any[]>
+    /**
+     * Get orders
+     *
+     * @returns {Promise<any>}
+     */
+    getOrders(): Promise<any>
     {
         return new Promise((resolve, reject) => {
-
-            this._httpClient.get('api/profile-timeline')
-                .subscribe((timeline: any) => {
-                    this.timeline = timeline;
-                    this.timelineOnChanged.next(this.timeline);
-                    resolve(this.timeline);
+            this._httpClient.get('api/e-commerce-orders')
+                .subscribe((response: any) => {
+                    this.orders = response;
+                    this.onOrdersChanged.next(this.orders);
+                    resolve(response);
                 }, reject);
         });
     }

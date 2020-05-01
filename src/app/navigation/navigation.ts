@@ -2,9 +2,9 @@ import { FuseNavigation } from '@fuse/types';
 
 export const navigation: FuseNavigation[] = [
     {
-        id       : 'applications',
-        title    : 'Applications',
-        translate: 'NAV.APPLICATIONS',
+        id       : 'menu-title',
+        title    : 'Menu',
+        translate: 'NAV.Menu',
         type     : 'group',
         icon     : 'apps',
         children : [
@@ -21,6 +21,12 @@ export const navigation: FuseNavigation[] = [
                 type     : 'item',
                 icon     : 'school',
                 url      : '/apps/academy'
+            },{
+                id        : 'orders',
+                title     : 'Orders',
+                type      : 'item',
+                icon     : 'shopping_cart',
+                url       : '/apps/e-commerce/orders',
             },
             {
                 id       : 'dashboards',

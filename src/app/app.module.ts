@@ -21,6 +21,10 @@ import { AppComponent } from 'app/app.component';
 import { AppStoreModule } from 'app/store/store.module';
 import { LayoutModule } from 'app/layout/layout.module';
 import {CommonModule} from "@angular/common";
+import {MatTableModule} from "@angular/material/table";
+import {MatSortModule} from "@angular/material/sort";
+import {MatRippleModule} from "@angular/material/core";
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 const appRoutes: Routes = [
     {
@@ -60,8 +64,9 @@ const appRoutes: Routes = [
 @NgModule({
     declarations: [
         AppComponent
+        // ServiceRequestsComponent
     ],
-    imports     : [
+    imports: [
         BrowserModule,
         CommonModule,
         BrowserAnimationsModule,
@@ -70,7 +75,7 @@ const appRoutes: Routes = [
 
         TranslateModule.forRoot(),
         InMemoryWebApiModule.forRoot(FakeDbService, {
-            delay             : 0,
+            delay: 0,
             passThruUnknownUrl: true
         }),
 
@@ -90,7 +95,11 @@ const appRoutes: Routes = [
 
         // App modules
         LayoutModule,
-        AppStoreModule
+        AppStoreModule,
+        MatTableModule,
+        MatSortModule,
+        MatRippleModule,
+        MatPaginatorModule
     ],
     bootstrap   : [
         AppComponent
