@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnDestroy, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
+import {Component, ElementRef, Input, OnDestroy, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
 import {MatPaginator} from "@angular/material/paginator";
 import {MatSort} from "@angular/material/sort";
 import {BehaviorSubject, fromEvent, merge, Observable, Subject} from "rxjs";
@@ -15,25 +15,11 @@ import {fuseAnimations} from "../../../../@fuse/animations";
     encapsulation: ViewEncapsulation.None,
     animations   : fuseAnimations
 })
-// export class ServiceRequestsComponent implements OnInit {
-//
-//   constructor() { }
-//
-//   ngOnInit() {
-//   }
-//
-// }
-
-// @Component({
-//     selector     : 'e-commerce-orders',
-//     templateUrl  : './orders.component.html',
-//     styleUrls    : ['./orders.component.scss'],
-//     animations   : fuseAnimations,
-//     encapsulation: ViewEncapsulation.None
-// })
 
 export class ServiceRequestsComponent implements OnInit, OnDestroy
 {
+    @Input() isHome: boolean;
+
     dataSource: FilesDataSource | null;
     displayedColumns = ['id', 'reference', 'customer', 'total', 'payment', 'status', 'date'];
 

@@ -1,6 +1,60 @@
 <div id="orders" class="page-layout carded fullwidth inner-scroll" >
+
+    <div class="top-bg accent" *ngIf="!isHome"></div>
+    <div *ngIf="isHome; then thenBlock"></div>
+
+    <ng-template #thenBlock>
+        <header class="header accent" fxLayout="row" fxLayoutAlign="space-between center">
+            <div class="more secondary-text">ראה עוד</div>
+            <!-- SEARCH -->
+            <div class="search-wrapper  ml-sm-12">
+                <div class="search" fxFlex fxLayout="row" fxLayoutAlign="start center">
+                    <mat-icon>search</mat-icon>
+                    <label>
+                        <input #filter placeholder="Search for an order">
+                    </label>
+                </div>
+            </div>
+            <div class="title">סטטוס הזמנות והיסטוריה</div>
+
+            <!-- / SEARCH -->
+        </header>
+    </ng-template>
+
+
     <!-- CENTER -->
     <div class="center" >
+        <div *ngIf="isHome; else elseBlock"></div>
+
+        <ng-template #elseBlock>
+            <!-- HEADER -->
+            <div class="header accent"
+                 fxLayout="column" fxLayoutAlign="center center"
+                 fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-between center">
+
+                <!-- APP TITLE -->
+                <div class="logo mb-24 mb-sm-0"
+                     fxLayout="row" fxLayoutAlign="start center">
+                    <mat-icon class="logo-icon s-32 mr-16" [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">
+                        shopping_basket
+                    </mat-icon>
+                    <span class="logo-text h1" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">Orders</span>
+                </div>
+                <!-- / APP TITLE -->
+
+                <!-- SEARCH -->
+                <div class="search-wrapper  ml-sm-32">
+                    <div class="search" fxFlex fxLayout="row" fxLayoutAlign="start center">
+                        <mat-icon>search</mat-icon>
+                        <input #filter placeholder="Search for an order">
+                    </div>
+                </div>
+                <!-- / SEARCH -->
+
+            </div>
+            <!-- / HEADER -->
+
+        </ng-template>
 
         <!-- CONTENT CARD -->
                 <div class="content-card">
