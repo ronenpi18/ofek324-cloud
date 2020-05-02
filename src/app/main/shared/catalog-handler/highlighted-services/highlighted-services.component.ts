@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Subject} from "rxjs";
 import {takeUntil} from "rxjs/operators";
 import {AcademyCoursesService} from "../../../apps/academy/courses.service";
+import {CatalogService} from "./catalog.service";
 
 @Component({
   selector: 'app-highlighted-services',
@@ -24,7 +25,7 @@ export class HighlightedServicesComponent implements OnInit {
     private _unsubscribeAll: Subject<any>;
 
     constructor(
-        private _academyCoursesService: AcademyCoursesService
+        private _academyCoursesService: CatalogService
     ) {
 
         // Set the defaults

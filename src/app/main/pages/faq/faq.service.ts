@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
+import {GlobalsProvider} from "../../shared/globals.provider";
 
 @Injectable()
 export class FaqService implements Resolve<any>
@@ -12,9 +13,11 @@ export class FaqService implements Resolve<any>
     /**
      * Constructor
      *
+     * @param globals
      * @param {HttpClient} _httpClient
      */
     constructor(
+        private globals: GlobalsProvider,
         private _httpClient: HttpClient
     )
     {
@@ -46,11 +49,11 @@ export class FaqService implements Resolve<any>
     /**
      * Get faqs
      */
-    getFaqs(): Promise<any[]>
+    getFaqs(): Promise<any>
     {
+        // return this._httpClient.get<[]>("http://localhost:8082/staticData/faq")
         return new Promise((resolve, reject) => {
-
-            this._httpClient.get('api/faq')
+            this._httpClient.get(this.globals.baseAPI + '/staticData/faq')
                 .subscribe((response: any) => {
                     this.faqs = response;
                     this.onFaqsChanged.next(this.faqs);

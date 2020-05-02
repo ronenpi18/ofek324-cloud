@@ -2,9 +2,9 @@
 
     <div class="top-bg accent" *ngIf="!isHome"></div>
     <div *ngIf="isHome; then thenBlock"></div>
-
+<!--TODO fix search functionallity-->
     <ng-template #thenBlock>
-        <header class="header accent" fxLayout="row" fxLayoutAlign="space-between center">
+        <header class="header accent" fxLayout="row" fxLayoutAlign="space-evenly center">
             <div class="more secondary-text">ראה עוד</div>
             <!-- SEARCH -->
             <div class="search-wrapper  ml-sm-12">
@@ -32,15 +32,6 @@
                  fxLayout="column" fxLayoutAlign="center center"
                  fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-between center">
 
-                <!-- APP TITLE -->
-                <div class="logo mb-24 mb-sm-0"
-                     fxLayout="row" fxLayoutAlign="start center">
-                    <mat-icon class="logo-icon s-32 mr-16" [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">
-                        shopping_basket
-                    </mat-icon>
-                    <span class="logo-text h1" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">Orders</span>
-                </div>
-                <!-- / APP TITLE -->
 
                 <!-- SEARCH -->
                 <div class="search-wrapper  ml-sm-32">
@@ -50,6 +41,15 @@
                     </div>
                 </div>
                 <!-- / SEARCH -->
+                <!-- APP TITLE -->
+                <div class="logo mb-24 mb-sm-0"
+                     fxLayout="row" fxLayoutAlign="start center">
+                    <mat-icon class="logo-icon s-32 mr-16" [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">
+                        shopping_basket
+                    </mat-icon>
+                    <span class="logo-text h1" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">סטטוס הזמנות והיסטוריה</span>
+                </div>
+                <!-- / APP TITLE -->
 
             </div>
             <!-- / HEADER -->

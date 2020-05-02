@@ -12,7 +12,6 @@ export class HomeComponent implements OnInit {
     private _unsubscribeAll: Subject<any>;
 
     constructor(
-        private _academyCoursesService: HomeService
     ) {
 
         // Set the defaults

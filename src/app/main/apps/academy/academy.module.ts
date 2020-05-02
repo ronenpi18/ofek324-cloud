@@ -24,13 +24,14 @@ import {MatTableModule} from "@angular/material/table";
 import {MatTabsModule} from "@angular/material/tabs";
 import {NgxChartsModule} from "@swimlane/ngx-charts";
 import {CommonModule} from "@angular/common";
+import {CatalogService} from "../../shared/catalog-handler/highlighted-services/catalog.service";
 
 const routes = [
     {
         path     : 'courses',
         component: AcademyCoursesComponent,
         resolve  : {
-            academy: AcademyCoursesService
+            academy: CatalogService
         }
     },
     {

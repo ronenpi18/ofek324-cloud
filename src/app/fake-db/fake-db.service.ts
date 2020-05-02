@@ -83,10 +83,10 @@ export class FakeDbService implements InMemoryDbService
             'search': SearchFakeDb.search,
 
             // FAQ
-            'faq': FaqFakeDb.data,
+            // 'faq': FaqFakeDb.data,
 
             // Knowledge base
-            'knowledge-base': KnowledgeBaseFakeDb.data,
+            // 'knowledge-base': KnowledgeBaseFakeDb.data,
 
             // Icons
             'icons': IconsFakeDb.icons,

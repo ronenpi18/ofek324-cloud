@@ -4,7 +4,6 @@ export const navigation: FuseNavigation[] = [
     {
         id       : 'menu-title',
         title    : 'Menu',
-        translate: 'NAV.Menu',
         type     : 'group',
         icon     : 'apps',
         children : [
@@ -21,12 +20,41 @@ export const navigation: FuseNavigation[] = [
                 type     : 'item',
                 icon     : 'school',
                 url      : '/apps/academy'
-            },{
+            },
+            {
                 id        : 'orders',
                 title     : 'Orders',
                 type      : 'item',
                 icon     : 'shopping_cart',
                 url       : '/apps/e-commerce/orders',
+            },
+            {
+                id       : 'calendar',
+                title    : 'Calendar',
+                translate: 'NAV.CALENDAR',
+                type     : 'item',
+                icon     : 'today',
+                url      : '/apps/calendar',
+                badge    : {
+                    title    : '13',
+                    translate: 'NAV.MAIL_NGRX.BADGE',
+                    bg       : '#EC0C8E',
+                    fg       : '#FFFFFF'
+                }
+            },
+            {
+                id   : 'knowledge-base',
+                title: 'Knowledge Base',
+                type : 'item',
+                icon : 'import_contacts',
+                url  : '/pages/knowledge-base'
+            },
+            {
+                id   : 'faq',
+                title: 'Faq',
+                type : 'item',
+                icon : 'help',
+                url  : '/pages/faq'
             },
             {
                 id       : 'dashboards',
@@ -49,14 +77,7 @@ export const navigation: FuseNavigation[] = [
                     }
                 ]
             },
-            {
-                id       : 'calendar',
-                title    : 'Calendar',
-                translate: 'NAV.CALENDAR',
-                type     : 'item',
-                icon     : 'today',
-                url      : '/apps/calendar'
-            },
+
             {
                 id       : 'e-commerce',
                 title    : 'E-Commerce',
@@ -135,14 +156,14 @@ export const navigation: FuseNavigation[] = [
                     fg   : '#FFFFFF'
                 }
             },
-            {
-                id       : 'file-manager',
-                title    : 'File Manager',
-                translate: 'NAV.FILE_MANAGER',
-                type     : 'item',
-                icon     : 'folder',
-                url      : '/apps/file-manager'
-            },
+            // {
+            //     id       : 'file-manager',
+            //     title    : 'File Manager',
+            //     translate: 'NAV.FILE_MANAGER',
+            //     type     : 'item',
+            //     icon     : 'folder',
+            //     url      : '/apps/file-manager'
+            // },
             {
                 id       : 'contacts',
                 title    : 'Contacts',
@@ -171,38 +192,6 @@ export const navigation: FuseNavigation[] = [
                 type     : 'item',
                 icon     : 'assessment',
                 url      : '/apps/scrumboard'
-            },
-            {
-                id       : 'scrumboard4',
-                title    : 'Scrumboard',
-                translate: 'NAV.SCRUMBOARD',
-                type     : 'item',
-                icon     : 'assessment',
-                url      : '/apps/scrumboard1'
-            },
-            {
-                id       : 'scrumboard3',
-                title    : 'Scrumboard',
-                translate: 'NAV.SCRUMBOARD',
-                type     : 'item',
-                icon     : 'assessment',
-                url      : '/apps/scrumboard2'
-            },
-            {
-                id       : 'scrumboard2',
-                title    : 'Scrumboard',
-                translate: 'NAV.SCRUMBOARD',
-                type     : 'item',
-                icon     : 'assessment',
-                url      : '/apps/scrumboard3'
-            },
-            {
-                id       : 'scrumboard1',
-                title    : 'Scrumboard',
-                translate: 'NAV.SCRUMBOARD',
-                type     : 'item',
-                icon     : 'assessment',
-                url      : '/apps/scrumboard4'
             }
         ]
     },

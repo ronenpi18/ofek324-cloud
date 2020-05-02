@@ -19,6 +19,7 @@ import {HomeService} from "../../../home/home.service";
 import {AcademyCoursesService} from "../../../apps/academy/courses.service";
 import {AcademyCourseService} from "../../../apps/academy/course.service";
 import {MatInputModule} from "@angular/material/input";
+import {CatalogService} from "./catalog.service";
 
 
 const routes: Routes = [
@@ -53,7 +54,7 @@ const routes: Routes = [
     ],
     providers:[
         HomeService,
-        AcademyCoursesService,
+        CatalogService,
         AcademyCourseService
     ]
 })
