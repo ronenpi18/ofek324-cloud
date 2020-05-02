@@ -161,28 +161,7 @@ export class AcademyFakeDb
         }
     ];
 
-    public static categories = [
-        {
-            'id'   : 0,
-            'value': 'web',
-            'label': 'Web'
-        },
-        {
-            'id'   : 1,
-            'value': 'firebase',
-            'label': 'Firebase'
-        },
-        {
-            'id'   : 2,
-            'value': 'cloud',
-            'label': 'Cloud'
-        },
-        {
-            'id'   : 3,
-            'value': 'android',
-            'label': 'Android'
-        }
-    ];
+    public static categories = [];
 
     private static demoSteps = [
         {

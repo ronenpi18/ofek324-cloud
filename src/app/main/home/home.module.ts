@@ -15,13 +15,14 @@ import {RequestsService} from "../shared/service-requests/requests.service";
 import {EcommerceOrderService} from "../apps/e-commerce/order/order.service";
 import {EcommerceProductService} from "../apps/e-commerce/product/product.service";
 import {EcommerceProductsService} from "../apps/e-commerce/products/products.service";
+import {CatalogService} from "../shared/catalog-handler/highlighted-services/catalog.service";
 
 const routes: Routes = [
     {
         path     : '**',
         component: HomeComponent,
         resolve  : {
-            academy: AcademyCoursesService,
+            academy: CatalogService,
             timeline: HomeService,
             recent: RequestsService
         }
