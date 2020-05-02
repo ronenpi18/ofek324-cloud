@@ -43,18 +43,20 @@ export class EventsTimelineComponent implements OnInit, OnDestroy
      */
     ngOnInit(): void
     {
-        this._profileService.timelineOnChanged
-            .pipe(takeUntil(this._unsubscribeAll))
-            .subscribe(timeline => {
-                if(this.amountOfItems) {
-                    let activitiesArr = timeline.activities.slice(0,this.amountOfItems)
-                    timeline.activities = activitiesArr
-                    this.timeline = timeline
-                }
-                else {
-                    this.timeline = timeline;
-                }
-            });
+        if(this.amountOfItems) {
+            this._profileService.leastEventsOnChanged
+                .pipe(takeUntil(this._unsubscribeAll))
+                .subscribe(events => {
+                    this.timeline = events;
+                });
+        } else {
+
+            this._profileService.timelineOnChanged
+                .pipe(takeUntil(this._unsubscribeAll))
+                .subscribe(events => {
+                    this.timeline = events;
+                });
+        }
     }
 
     /**
