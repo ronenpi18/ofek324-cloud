@@ -3,7 +3,7 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { FuseConfirmDialogComponent } from '@fuse/components/confirm-dialog/confirm-dialog.component';
+import { EssentialsConfirmDialogComponent } from '@essentials/components/confirm-dialog/confirm-dialog.component';
 
 import { ContactsService } from 'app/main/apps/contacts/contacts.service';
 
@@ -14,7 +14,7 @@ import { ContactsService } from 'app/main/apps/contacts/contacts.service';
 })
 export class ContactsSelectedBarComponent implements OnInit, OnDestroy
 {
-    confirmDialogRef: MatDialogRef<FuseConfirmDialogComponent>;
+    confirmDialogRef: MatDialogRef<EssentialsConfirmDialogComponent>;
     hasSelectedContacts: boolean;
     isIndeterminate: boolean;
     selectedContacts: string[];
@@ -92,7 +92,7 @@ export class ContactsSelectedBarComponent implements OnInit, OnDestroy
      */
     deleteSelectedContacts(): void
     {
-        this.confirmDialogRef = this._matDialog.open(FuseConfirmDialogComponent, {
+        this.confirmDialogRef = this._matDialog.open(EssentialsConfirmDialogComponent, {
             disableClose: false
         });
 

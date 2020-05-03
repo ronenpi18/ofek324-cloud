@@ -1,0 +1,33 @@
+<div class="nav" [ngClass]="{'horizontal':layout === 'horizontal', 'vertical':layout === 'vertical'}">
+
+    <!-- Vertical Navigation Layout -->
+    <ng-container *ngIf="layout === 'vertical'">
+
+        <ng-container *ngFor="let item of navigation">
+
+            <essentials-nav-vertical-group *ngIf="item.type=='group'" [item]="item"></essentials-nav-vertical-group>
+            <essentials-nav-vertical-collapsable *ngIf="item.type=='collapsable'"
+                                           [item]="item"></essentials-nav-vertical-collapsable>
+            <essentials-nav-vertical-item *ngIf="item.type=='item'" [item]="item"></essentials-nav-vertical-item>
+
+        </ng-container>
+
+    </ng-container>
+    <!-- / Vertical Navigation Layout -->
+
+    <!-- Horizontal Navigation Layout -->
+    <ng-container *ngIf="layout === 'horizontal'">
+
+        <ng-container *ngFor="let item of navigation">
+
+            <essentials-nav-horizontal-collapsable *ngIf="item.type=='group'" [item]="item"></essentials-nav-horizontal-collapsable>
+            <essentials-nav-horizontal-collapsable *ngIf="item.type=='collapsable'"
+                                             [item]="item"></essentials-nav-horizontal-collapsable>
+            <essentials-nav-horizontal-item *ngIf="item.type=='item'" [item]="item"></essentials-nav-horizontal-item>
+
+        </ng-container>
+
+    </ng-container>
+    <!-- / Horizontal Navigation Layout -->
+
+</div>

@@ -6,8 +6,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTableModule } from '@angular/material/table';
 
-import { FuseSharedModule } from '@fuse/shared.module';
-import { FuseSidebarModule } from '@fuse/components';
+import { EssentialsSharedModule } from '@essentials/shared.module';
+import { EssentialsSidebarModule } from '@essentials/components';
 
 import { FileManagerService } from 'app/main/apps/file-manager/file-manager.service';
 import { FileManagerComponent } from 'app/main/apps/file-manager/file-manager.component';
@@ -42,8 +42,8 @@ const routes: Routes = [
         MatSlideToggleModule,
         MatTableModule,
 
-        FuseSharedModule,
-        FuseSidebarModule
+        EssentialsSharedModule,
+        EssentialsSidebarModule
     ],
     providers   : [
         FileManagerService

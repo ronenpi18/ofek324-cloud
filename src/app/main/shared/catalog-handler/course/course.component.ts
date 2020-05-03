@@ -2,9 +2,9 @@ import { AfterViewInit, ChangeDetectorRef, Component, OnDestroy, OnInit, QueryLi
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { fuseAnimations } from '@fuse/animations';
-import { FusePerfectScrollbarDirective } from '@fuse/directives/fuse-perfect-scrollbar/fuse-perfect-scrollbar.directive';
-import { FuseSidebarService } from '@fuse/components/sidebar/sidebar.service';
+import { fuseAnimations } from '@essentials/animations';
+import { EssentialsPerfectScrollbarDirective } from '@essentials/directives/essentials-perfect-scrollbar/essentials-perfect-scrollbar.directive';
+import { EssentialsSidebarService } from '@essentials/components/sidebar/sidebar.service';
 
 import { AcademyCourseService } from 'app/main/apps/academy/course.service';
 
@@ -22,8 +22,8 @@ export class AcademyCourseComponent implements OnInit, OnDestroy, AfterViewInit
     courseStepContent: any;
     currentStep: number;
 
-    @ViewChildren(FusePerfectScrollbarDirective)
-    fuseScrollbarDirectives: QueryList<FusePerfectScrollbarDirective>;
+    @ViewChildren(EssentialsPerfectScrollbarDirective)
+    fuseScrollbarDirectives: QueryList<EssentialsPerfectScrollbarDirective>;
 
     // Private
     private _unsubscribeAll: Subject<any>;
@@ -33,12 +33,12 @@ export class AcademyCourseComponent implements OnInit, OnDestroy, AfterViewInit
      *
      * @param {AcademyCourseService} _academyCourseService
      * @param {ChangeDetectorRef} _changeDetectorRef
-     * @param {FuseSidebarService} _fuseSidebarService
+     * @param {EssentialsSidebarService} _essentialsSidebarService
      */
     constructor(
         private _academyCourseService: AcademyCourseService,
         private _changeDetectorRef: ChangeDetectorRef,
-        private _fuseSidebarService: FuseSidebarService
+        private _essentialsSidebarService: EssentialsSidebarService
     )
     {
         // Set the defaults
@@ -157,6 +157,6 @@ export class AcademyCourseComponent implements OnInit, OnDestroy, AfterViewInit
      */
     toggleSidebar(name): void
     {
-        this._fuseSidebarService.getSidebar(name).toggleOpen();
+        this._essentialsSidebarService.getSidebar(name).toggleOpen();
     }
 }

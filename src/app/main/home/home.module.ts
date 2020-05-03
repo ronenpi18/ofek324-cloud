@@ -4,8 +4,8 @@ import { HomeComponent } from './home.component';
 import {RouterModule, Routes} from "@angular/router";
 import {HomeService} from "./home.service";
 import {MatIconModule} from "@angular/material/icon";
-import {FuseSharedModule} from "@fuse/shared.module";
-import {FuseSidebarModule, FuseWidgetModule} from "@fuse/components";
+import {EssentialsSharedModule} from "@essentials/shared.module";
+import {EssentialsSidebarModule, EssentialsWidgetModule} from "@essentials/components";
 import {EventsTimelineComponent} from "./events/events.component";
 import {AcademyCoursesService} from "../apps/academy/courses.service";
 import {AcademyCourseService} from "../apps/academy/course.service";
@@ -15,13 +15,14 @@ import {RequestsService} from "../shared/service-requests/requests.service";
 import {EcommerceOrderService} from "../apps/e-commerce/order/order.service";
 import {EcommerceProductService} from "../apps/e-commerce/product/product.service";
 import {EcommerceProductsService} from "../apps/e-commerce/products/products.service";
+import {CatalogService} from "../shared/catalog-handler/highlighted-services/catalog.service";
 
 const routes: Routes = [
     {
         path     : '**',
         component: HomeComponent,
         resolve  : {
-            academy: AcademyCoursesService,
+            academy: CatalogService,
             timeline: HomeService,
             recent: RequestsService
         }
@@ -39,9 +40,9 @@ const routes: Routes = [
         CommonModule,
         RouterModule.forChild(routes),
         MatIconModule,
-        FuseSharedModule,
-        FuseSidebarModule,
-        FuseWidgetModule,
+        EssentialsSharedModule,
+        EssentialsSidebarModule,
+        EssentialsWidgetModule,
 
         ServiceCatalogModule,
         ServiceRequestsModule,

@@ -5,7 +5,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 
-import { FuseSharedModule } from '@fuse/shared.module';
+import { EssentialsSharedModule } from '@essentials/shared.module';
 
 import { ResetPassword2Component } from 'app/main/pages/authentication/reset-password-2/reset-password-2.component';
 
@@ -28,7 +28,7 @@ const routes = [
         MatIconModule,
         MatInputModule,
 
-        FuseSharedModule
+        EssentialsSharedModule
     ]
 })
 export class ResetPassword2Module

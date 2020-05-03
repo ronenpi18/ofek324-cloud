@@ -2,9 +2,9 @@ import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
 
-import { FuseConfigService } from '@fuse/services/config.service';
-import { FuseNavigationService } from '@fuse/components/navigation/navigation.service';
-import { FuseSidebarService } from '@fuse/components/sidebar/sidebar.service';
+import { EssentialsConfigService } from '@essentials/services/config.service';
+import { EssentialsNavigationService } from '@essentials/components/navigation/navigation.service';
+import { EssentialsSidebarService } from '@essentials/components/sidebar/sidebar.service';
 
 @Component({
     selector     : 'navbar-horizontal-style-1',
@@ -23,14 +23,14 @@ export class NavbarHorizontalStyle1Component implements OnInit, OnDestroy
     /**
      * Constructor
      *
-     * @param {FuseConfigService} _fuseConfigService
-     * @param {FuseNavigationService} _fuseNavigationService
-     * @param {FuseSidebarService} _fuseSidebarService
+     * @param {EssentialsConfigService} _essentialsConfigService
+     * @param {EssentialsNavigationService} _essentialsNavigationService
+     * @param {EssentialsSidebarService} _essentialsSidebarService
      */
     constructor(
-        private _fuseConfigService: FuseConfigService,
-        private _fuseNavigationService: FuseNavigationService,
-        private _fuseSidebarService: FuseSidebarService
+        private _essentialsConfigService: EssentialsConfigService,
+        private _essentialsNavigationService: EssentialsNavigationService,
+        private _essentialsSidebarService: EssentialsSidebarService
     )
     {
         // Set the private defaults
@@ -47,17 +47,17 @@ export class NavbarHorizontalStyle1Component implements OnInit, OnDestroy
     ngOnInit(): void
     {
         // Get current navigation
-        this._fuseNavigationService.onNavigationChanged
+        this._essentialsNavigationService.onNavigationChanged
             .pipe(
                 filter(value => value !== null),
                 takeUntil(this._unsubscribeAll)
             )
             .subscribe(() => {
-                this.navigation = this._fuseNavigationService.getCurrentNavigation();
+                this.navigation = this._essentialsNavigationService.getCurrentNavigation();
             });
 
         // Subscribe to the config changes
-        this._fuseConfigService.config
+        this._essentialsConfigService.config
             .pipe(takeUntil(this._unsubscribeAll))
             .subscribe((config) => {
                 this.fuseConfig = config;

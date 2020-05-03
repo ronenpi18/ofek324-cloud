@@ -1,4 +1,4 @@
-@import "src/@fuse/scss/fuse";
+@import "../../../../@essentials/scss/essentials";
 
 chat-panel {
     display: flex;
@@ -374,7 +374,7 @@ chat-panel {
     }
 }
 
-fuse-sidebar {
+essentials-sidebar {
 
     &.chat-panel {
         width: 360px;

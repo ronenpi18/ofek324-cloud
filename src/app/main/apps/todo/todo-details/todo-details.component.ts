@@ -3,8 +3,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, takeUntil } from 'rxjs/operators';
 
-import { FuseUtils } from '@fuse/utils';
-import { fuseAnimations } from '@fuse/animations';
+import { EssentialsUtils } from '@essentials/utils';
+import { fuseAnimations } from '@essentials/animations';
 
 import { Todo } from 'app/main/apps/todo/todo.model';
 import { TodoService } from 'app/main/apps/todo/todo.service';
@@ -88,7 +88,7 @@ export class TodoDetailsComponent implements OnInit, OnDestroy
             .pipe(takeUntil(this._unsubscribeAll))
             .subscribe(() => {
                 this.todo = new Todo({});
-                this.todo.id = FuseUtils.generateGUID();
+                this.todo.id = EssentialsUtils.generateGUID();
                 this.formType = 'new';
                 this.todoForm = this.createTodoForm();
                 this.focusTitleField();

@@ -5,11 +5,11 @@ import { TranslateService } from '@ngx-translate/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { FuseConfigService } from '@fuse/services/config.service';
-import { FuseNavigationService } from '@fuse/components/navigation/navigation.service';
-import { FuseSidebarService } from '@fuse/components/sidebar/sidebar.service';
-import { FuseSplashScreenService } from '@fuse/services/splash-screen.service';
-import { FuseTranslationLoaderService } from '@fuse/services/translation-loader.service';
+import { EssentialsConfigService } from '@essentials/services/config.service';
+import { EssentialsNavigationService } from '@essentials/components/navigation/navigation.service';
+import { EssentialsSidebarService } from '@essentials/components/sidebar/sidebar.service';
+import { EssentialsSplashScreenService } from '@essentials/services/splash-screen.service';
+import { EssentialsTranslationLoaderService } from '@essentials/services/translation-loader.service';
 
 import { navigation } from 'app/navigation/navigation';
 import { locale as navigationEnglish } from 'app/navigation/i18n/en';
@@ -32,21 +32,21 @@ export class AppComponent implements OnInit, OnDestroy
      * Constructor
      *
      * @param {DOCUMENT} document
-     * @param {FuseConfigService} _fuseConfigService
-     * @param {FuseNavigationService} _fuseNavigationService
-     * @param {FuseSidebarService} _fuseSidebarService
-     * @param {FuseSplashScreenService} _fuseSplashScreenService
-     * @param {FuseTranslationLoaderService} _fuseTranslationLoaderService
+     * @param {EssentialsConfigService} _essentialsConfigService
+     * @param {EssentialsNavigationService} _essentialsNavigationService
+     * @param {EssentialsSidebarService} _essentialsSidebarService
+     * @param {EssentialsSplashScreenService} _essentialsSplashScreenService
+     * @param {EssentialsTranslationLoaderService} _essentialsTranslationLoaderService
      * @param {Platform} _platform
      * @param {TranslateService} _translateService
      */
     constructor(
         @Inject(DOCUMENT) private document: any,
-        private _fuseConfigService: FuseConfigService,
-        private _fuseNavigationService: FuseNavigationService,
-        private _fuseSidebarService: FuseSidebarService,
-        private _fuseSplashScreenService: FuseSplashScreenService,
-        private _fuseTranslationLoaderService: FuseTranslationLoaderService,
+        private _essentialsConfigService: EssentialsConfigService,
+        private _essentialsNavigationService: EssentialsNavigationService,
+        private _essentialsSidebarService: EssentialsSidebarService,
+        private _essentialsSplashScreenService: EssentialsSplashScreenService,
+        private _essentialsTranslationLoaderService: EssentialsTranslationLoaderService,
         private _translateService: TranslateService,
         private _platform: Platform
     )
@@ -55,10 +55,10 @@ export class AppComponent implements OnInit, OnDestroy
         this.navigation = navigation;
 
         // Register the navigation to the service
-        this._fuseNavigationService.register('main', this.navigation);
+        this._essentialsNavigationService.register('main', this.navigation);
 
         // Set the main navigation as our current navigation
-        this._fuseNavigationService.setCurrentNavigation('main');
+        this._essentialsNavigationService.setCurrentNavigation('main');
 
         // Add languages
         this._translateService.addLangs(['en', 'tr']);
@@ -67,7 +67,7 @@ export class AppComponent implements OnInit, OnDestroy
         this._translateService.setDefaultLang('en');
 
         // Set the navigation translations
-        this._fuseTranslationLoaderService.loadTranslations(navigationEnglish, navigationTurkish);
+        this._essentialsTranslationLoaderService.loadTranslations(navigationEnglish, navigationTurkish);
 
         // Use a language
         this._translateService.use('en');
@@ -125,7 +125,7 @@ export class AppComponent implements OnInit, OnDestroy
     ngOnInit(): void
     {
         // Subscribe to config changes
-        this._fuseConfigService.config
+        this._essentialsConfigService.config
             .pipe(takeUntil(this._unsubscribeAll))
             .subscribe((config) => {
 
@@ -177,6 +177,6 @@ export class AppComponent implements OnInit, OnDestroy
      */
     toggleSidebarOpen(key): void
     {
-        this._fuseSidebarService.getSidebar(key).toggleOpen();
+        this._essentialsSidebarService.getSidebar(key).toggleOpen();
     }
 }

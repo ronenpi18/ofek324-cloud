@@ -4,7 +4,7 @@
 
         <div class="title ml-16" fxLayout="row" fxLayoutAlign="start center"
              (click)="unfoldSidebarTemporarily()">
-            <mat-icon class="s-32 fuse-white-fg">chat</mat-icon>
+            <mat-icon class="s-32 essentials-white-fg">chat</mat-icon>
             <h3 class="ml-12">Team Chat</h3>
         </div>
 
@@ -34,7 +34,7 @@
 <div class="content">
 
     <!-- Contacts -->
-    <div id="contacts-list" fusePerfectScrollbar [fusePerfectScrollbarOptions]="{suppressScrollX: true}">
+    <div id="contacts-list" essentialsPerfectScrollbar [essentialsPerfectScrollbarOptions]="{suppressScrollX: true}">
 
         <div *ngFor="let contact of contacts"
              class="contacts-list-item"
@@ -56,7 +56,7 @@
     <!-- Chat -->
     <div id="chat" fxLayout="column" fxFlex="1 1 auto">
 
-        <div id="messages" class="messages" fxFlex="1 1 auto" fusePerfectScrollbar>
+        <div id="messages" class="messages" fxFlex="1 1 auto" essentialsPerfectScrollbar>
 
             <ng-container *ngIf="chat && chat.dialog && chat.dialog.length > 0">
 

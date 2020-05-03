@@ -1,4 +1,4 @@
-@import "src/@fuse/scss/fuse";
+@import "../../../../@essentials/scss/essentials";
 
 app-service-requests {
 
@@ -13,9 +13,10 @@ app-service-requests {
 
         > .center {
             padding: 0 !important;
-            height: 500px;
+            height: 420px;
             .header {
 
+                place-content: center space-around !important;
                 .search-wrapper {
                     width: 100%;
                     max-width: 480px;

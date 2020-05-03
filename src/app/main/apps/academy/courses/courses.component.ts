@@ -2,7 +2,7 @@ import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { fuseAnimations } from '@fuse/animations';
+import { fuseAnimations } from '@essentials/animations';
 
 import { AcademyCoursesService } from 'app/main/apps/academy/courses.service';
 import {HomeService} from "../../../home/home.service";

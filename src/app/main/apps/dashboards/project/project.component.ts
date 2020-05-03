@@ -3,10 +3,10 @@ import { DataSource } from '@angular/cdk/collections';
 import { BehaviorSubject, Observable } from 'rxjs';
 import * as shape from 'd3-shape';
 
-import { fuseAnimations } from '@fuse/animations';
+import { fuseAnimations } from '@essentials/animations';
 
 import { ProjectDashboardService } from 'app/main/apps/dashboards/project/project.service';
-import { FuseSidebarService } from '@fuse/components/sidebar/sidebar.service';
+import { EssentialsSidebarService } from '@essentials/components/sidebar/sidebar.service';
 
 @Component({
     selector     : 'project-dashboard',
@@ -33,11 +33,11 @@ export class ProjectDashboardComponent implements OnInit
     /**
      * Constructor
      *
-     * @param {FuseSidebarService} _fuseSidebarService
+     * @param {EssentialsSidebarService} _essentialsSidebarService
      * @param {ProjectDashboardService} _projectDashboardService
      */
     constructor(
-        private _fuseSidebarService: FuseSidebarService,
+        private _essentialsSidebarService: EssentialsSidebarService,
         private _projectDashboardService: ProjectDashboardService
     )
     {
@@ -176,7 +176,7 @@ export class ProjectDashboardComponent implements OnInit
      */
     toggleSidebar(name): void
     {
-        this._fuseSidebarService.getSidebar(name).toggleOpen();
+        this._essentialsSidebarService.getSidebar(name).toggleOpen();
     }
 }
 

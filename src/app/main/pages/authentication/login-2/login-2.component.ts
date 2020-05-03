@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { FuseConfigService } from '@fuse/services/config.service';
-import { fuseAnimations } from '@fuse/animations';
+import { EssentialsConfigService } from '@essentials/services/config.service';
+import { fuseAnimations } from '@essentials/animations';
 
 @Component({
     selector     : 'login-2',
@@ -18,16 +18,16 @@ export class Login2Component implements OnInit
     /**
      * Constructor
      *
-     * @param {FuseConfigService} _fuseConfigService
+     * @param {EssentialsConfigService} _essentialsConfigService
      * @param {FormBuilder} _formBuilder
      */
     constructor(
-        private _fuseConfigService: FuseConfigService,
+        private _essentialsConfigService: EssentialsConfigService,
         private _formBuilder: FormBuilder
     )
     {
         // Configure the layout
-        this._fuseConfigService.config = {
+        this._essentialsConfigService.config = {
             layout: {
                 navbar   : {
                     hidden: true

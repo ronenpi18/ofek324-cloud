@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
+import {GlobalsProvider} from "../../shared/globals.provider";
 
 @Injectable()
 export class KnowledgeBaseService implements Resolve<any>
@@ -13,9 +14,12 @@ export class KnowledgeBaseService implements Resolve<any>
      * Constructor
      *
      * @param {HttpClient} _httpClient
+     * @param globals
      */
     constructor(
-        private _httpClient: HttpClient
+        private _httpClient: HttpClient,
+        private globals: GlobalsProvider,
+
     )
     {
         // Set the defaults
@@ -50,7 +54,7 @@ export class KnowledgeBaseService implements Resolve<any>
     {
         return new Promise((resolve, reject) => {
 
-            this._httpClient.get('api/knowledge-base')
+            this._httpClient.get(this.globals.baseAPI+'/staticData/kbase')
                 .subscribe((response: any) => {
                     this.knowledgeBase = response;
                     this.onKnowledgeBaseChanged.next(this.knowledgeBase);

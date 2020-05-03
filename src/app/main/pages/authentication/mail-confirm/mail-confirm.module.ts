@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 
-import { FuseSharedModule } from '@fuse/shared.module';
+import { EssentialsSharedModule } from '@essentials/shared.module';
 
 import { MailConfirmComponent } from 'app/main/pages/authentication/mail-confirm/mail-confirm.component';
 
@@ -22,7 +22,7 @@ const routes = [
 
         MatIconModule,
 
-        FuseSharedModule
+        EssentialsSharedModule
     ]
 })
 export class MailConfirmModule

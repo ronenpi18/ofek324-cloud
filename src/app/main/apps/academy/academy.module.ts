@@ -7,13 +7,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 
-import { FuseSharedModule } from '@fuse/shared.module';
+import { EssentialsSharedModule } from '@essentials/shared.module';
 
 import { AcademyCoursesComponent } from 'app/main/apps/academy/courses/courses.component';
 import { AcademyCourseComponent } from 'app/main/shared/catalog-handler/course/course.component';
 import { AcademyCoursesService } from 'app/main/apps/academy/courses.service';
 import { AcademyCourseService } from 'app/main/apps/academy/course.service';
-import {FuseSidebarModule, FuseWidgetModule} from '@fuse/components';
+import {EssentialsSidebarModule, EssentialsWidgetModule} from '@essentials/components';
 import {MatListModule} from "@angular/material/list";
 import {StepsCourseModule} from "../../shared/catalog-handler/course/steps-course.module";
 import {ServiceCatalogModule} from "../../shared/catalog-handler/highlighted-services/service-catalog.module";
@@ -24,13 +24,14 @@ import {MatTableModule} from "@angular/material/table";
 import {MatTabsModule} from "@angular/material/tabs";
 import {NgxChartsModule} from "@swimlane/ngx-charts";
 import {CommonModule} from "@angular/common";
+import {CatalogService} from "../../shared/catalog-handler/highlighted-services/catalog.service";
 
 const routes = [
     {
         path     : 'courses',
         component: AcademyCoursesComponent,
         resolve  : {
-            academy: AcademyCoursesService
+            academy: CatalogService
         }
     },
     {
@@ -54,9 +55,9 @@ const routes = [
         CommonModule,
         RouterModule.forChild(routes),
         MatIconModule,
-        FuseSharedModule,
-        FuseSidebarModule,
-        FuseWidgetModule,
+        EssentialsSharedModule,
+        EssentialsSidebarModule,
+        EssentialsWidgetModule,
 
         StepsCourseModule,
         ServiceCatalogModule

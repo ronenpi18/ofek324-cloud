@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { FuseSidebarModule } from '@fuse/components/index';
-import { FuseSharedModule } from '@fuse/shared.module';
+import { EssentialsSidebarModule } from '@essentials/components/index';
+import { EssentialsSharedModule } from '@essentials/shared.module';
 
 import { ChatPanelModule } from 'app/layout/components/chat-panel/chat-panel.module';
 import { ContentModule } from 'app/layout/components/content/content.module';
@@ -20,8 +20,8 @@ import { VerticalLayout3Component } from 'app/layout/vertical/layout-3/layout-3.
     imports     : [
         RouterModule,
 
-        FuseSharedModule,
-        FuseSidebarModule,
+        EssentialsSharedModule,
+        EssentialsSidebarModule,
 
         ChatPanelModule,
         ContentModule,

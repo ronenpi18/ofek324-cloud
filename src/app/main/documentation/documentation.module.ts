@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { MatIconModule } from '@angular/material/icon';
 
-import { FuseSharedModule } from '@fuse/shared.module';
+import { EssentialsSharedModule } from '@essentials/shared.module';
 
 import { DocsChangelogComponent } from 'app/main/documentation/changelog/changelog.component';
 
@@ -18,7 +18,7 @@ const routes: Routes = [
     },
     {
         path        : 'working-with-fuse',
-        loadChildren: './working-with-fuse/working-with-fuse.module#WorkingWithFuseModule'
+        loadChildren: './working-with-essentials/working-with-essentials.module#WorkingWithEssentialsModule'
     },
     {
         path        : 'components',
@@ -47,7 +47,7 @@ const routes: Routes = [
 
         MatIconModule,
 
-        FuseSharedModule
+        EssentialsSharedModule
     ]
 })
 export class DocumentationModule

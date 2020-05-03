@@ -5,8 +5,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { fuseAnimations } from '@fuse/animations';
-import { FuseUtils } from '@fuse/utils';
+import { fuseAnimations } from '@essentials/animations';
+import { EssentialsUtils } from '@essentials/utils';
 
 import { Product } from 'app/main/apps/e-commerce/product/product.model';
 import { EcommerceProductService } from 'app/main/apps/e-commerce/product/product.service';
@@ -128,7 +128,7 @@ export class EcommerceProductComponent implements OnInit, OnDestroy
     saveProduct(): void
     {
         const data = this.productForm.getRawValue();
-        data.handle = FuseUtils.handleize(data.name);
+        data.handle = EssentialsUtils.handleize(data.name);
 
         this._ecommerceProductService.saveProduct(data)
             .then(() => {
@@ -150,7 +150,7 @@ export class EcommerceProductComponent implements OnInit, OnDestroy
     addProduct(): void
     {
         const data = this.productForm.getRawValue();
-        data.handle = FuseUtils.handleize(data.name);
+        data.handle = EssentialsUtils.handleize(data.name);
 
         this._ecommerceProductService.addProduct(data)
             .then(() => {

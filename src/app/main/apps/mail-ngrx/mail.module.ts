@@ -12,8 +12,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { TranslateModule } from '@ngx-translate/core';
 
-import { FuseSharedModule } from '@fuse/shared.module';
-import { FuseSidebarModule } from '@fuse/components';
+import { EssentialsSharedModule } from '@essentials/shared.module';
+import { EssentialsSidebarModule } from '@essentials/components';
 
 import * as fromGuards from 'app/main/apps/mail-ngrx/store/guards/index';
 import { MailNgrxStoreModule } from 'app/main/apps/mail-ngrx/store/store.module';
@@ -87,8 +87,8 @@ const routes: Routes = [
 
         TranslateModule,
 
-        FuseSharedModule,
-        FuseSidebarModule,
+        EssentialsSharedModule,
+        EssentialsSidebarModule,
 
         MailNgrxStoreModule
     ],

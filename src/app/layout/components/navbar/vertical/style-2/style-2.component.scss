@@ -1,8 +1,8 @@
-@import "src/@fuse/scss/fuse";
+@import "../../../../../../@essentials/scss/essentials";
 
-fuse-sidebar {
+essentials-sidebar {
 
-    &.navbar-fuse-sidebar {
+    &.navbar-essentials-sidebar {
         overflow: hidden;
 
         &.folded:not(.unfolded) {

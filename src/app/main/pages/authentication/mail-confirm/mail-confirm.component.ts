@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
-import { FuseConfigService } from '@fuse/services/config.service';
-import { fuseAnimations } from '@fuse/animations';
+import { EssentialsConfigService } from '@essentials/services/config.service';
+import { fuseAnimations } from '@essentials/animations';
 
 @Component({
     selector     : 'mail-confirm',
@@ -15,14 +15,14 @@ export class MailConfirmComponent
     /**
      * Constructor
      *
-     * @param {FuseConfigService} _fuseConfigService
+     * @param {EssentialsConfigService} _essentialsConfigService
      */
     constructor(
-        private _fuseConfigService: FuseConfigService
+        private _essentialsConfigService: EssentialsConfigService
     )
     {
         // Configure the layout
-        this._fuseConfigService.config = {
+        this._essentialsConfigService.config = {
             layout: {
                 navbar   : {
                     hidden: true

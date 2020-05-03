@@ -4,8 +4,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 
-import { FuseSharedModule } from '@fuse/shared.module';
-import { FuseDemoModule } from '@fuse/components/demo/demo.module';
+import { EssentialsSharedModule } from '@essentials/shared.module';
+import { EssentialsDemoModule } from '@essentials/components/demo/demo.module';
 
 import { CardedFullWidth1Component } from 'app/main/ui/page-layouts/carded/full-width-1/full-width-1.component';
 import { CardedFullWidth2Component } from 'app/main/ui/page-layouts/carded/full-width-2/full-width-2.component';
@@ -31,7 +31,7 @@ import { SimpleRightSidebar3Component } from 'app/main/ui/page-layouts/simple/ri
 import { SimpleRightSidebar4Component } from 'app/main/ui/page-layouts/simple/right-sidebar-4/right-sidebar-4.component';
 import { BlankComponent } from 'app/main/ui/page-layouts/blank/blank.component';
 
-import { FuseSidebarModule } from '@fuse/components';
+import { EssentialsSidebarModule } from '@essentials/components';
 
 const routes: Routes = [
     // Carded
@@ -164,9 +164,9 @@ const routes: Routes = [
         MatIconModule,
         MatTabsModule,
 
-        FuseSidebarModule,
-        FuseSharedModule,
-        FuseDemoModule
+        EssentialsSidebarModule,
+        EssentialsSharedModule,
+        EssentialsDemoModule
     ]
 })
 export class UIPageLayoutsModule

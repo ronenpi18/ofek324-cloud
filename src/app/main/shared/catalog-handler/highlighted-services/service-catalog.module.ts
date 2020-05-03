@@ -11,14 +11,15 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatTableModule} from "@angular/material/table";
 import {MatTabsModule} from "@angular/material/tabs";
 import {NgxChartsModule} from "@swimlane/ngx-charts";
-import {FuseSharedModule} from "../../../../../@fuse/shared.module";
-import {FuseSidebarModule, FuseWidgetModule} from "../../../../../@fuse/components";
+import {EssentialsSharedModule} from "../../../../../@essentials/shared.module";
+import {EssentialsSidebarModule, EssentialsWidgetModule} from "../../../../../@essentials/components";
 import {RouterModule, Routes} from "@angular/router";
 import {StepsCourseModule} from "../course/steps-course.module";
 import {HomeService} from "../../../home/home.service";
 import {AcademyCoursesService} from "../../../apps/academy/courses.service";
 import {AcademyCourseService} from "../../../apps/academy/course.service";
 import {MatInputModule} from "@angular/material/input";
+import {CatalogService} from "./catalog.service";
 
 
 const routes: Routes = [
@@ -43,9 +44,9 @@ const routes: Routes = [
         MatTableModule,
         MatTabsModule,
         NgxChartsModule,
-        FuseSharedModule,
-        FuseSidebarModule,
-        FuseWidgetModule,
+        EssentialsSharedModule,
+        EssentialsSidebarModule,
+        EssentialsWidgetModule,
         MatInputModule
     ],
     exports: [
@@ -53,7 +54,7 @@ const routes: Routes = [
     ],
     providers:[
         HomeService,
-        AcademyCoursesService,
+        CatalogService,
         AcademyCourseService
     ]
 })
