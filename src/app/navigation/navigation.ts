@@ -1,6 +1,6 @@
-import { FuseNavigation } from '@fuse/types';
+import { EssentialsNavigation } from '@essentials/types';
 
-export const navigation: FuseNavigation[] = [
+export const navigation: EssentialsNavigation[] = [
     {
         id       : 'menu-title',
         title    : 'Menu',
@@ -929,7 +929,7 @@ export const navigation: FuseNavigation[] = [
     //         },
     //         {
     //             id      : 'working-with-fuse',
-    //             title   : 'Working with Fuse',
+    //             title   : 'Working with Essentials',
     //             type    : 'collapsable',
     //             icon    : 'import_contacts',
     //             children: [
@@ -953,7 +953,7 @@ export const navigation: FuseNavigation[] = [
     //                 },
     //                 {
     //                     id   : 'updating-fuse',
-    //                     title: 'Updating Fuse',
+    //                     title: 'Updating Essentials',
     //                     type : 'item',
     //                     url  : '/documentation/working-with-fuse/updating-fuse'
     //                 },
@@ -1079,28 +1079,28 @@ export const navigation: FuseNavigation[] = [
     //             icon    : 'import_contacts',
     //             children: [
     //                 {
-    //                     id   : 'fuse-if-on-dom',
+    //                     id   : 'essentials-if-on-dom',
     //                     title: 'fuseIfOnDom',
     //                     type : 'item',
-    //                     url  : '/documentation/directives/fuse-if-on-dom'
+    //                     url  : '/documentation/directives/essentials-if-on-dom'
     //                 },
     //                 {
-    //                     id   : 'fuse-inner-scroll',
+    //                     id   : 'essentials-inner-scroll',
     //                     title: 'fuseInnerScroll',
     //                     type : 'item',
-    //                     url  : '/documentation/directives/fuse-inner-scroll'
+    //                     url  : '/documentation/directives/essentials-inner-scroll'
     //                 },
     //                 {
-    //                     id   : 'fuse-mat-sidenav',
+    //                     id   : 'essentials-mat-sidenav',
     //                     title: 'fuseMatSidenav',
     //                     type : 'item',
-    //                     url  : '/documentation/directives/fuse-mat-sidenav'
+    //                     url  : '/documentation/directives/essentials-mat-sidenav'
     //                 },
     //                 {
-    //                     id   : 'fuse-perfect-scrollbar',
-    //                     title: 'fusePerfectScrollbar',
+    //                     id   : 'essentials-perfect-scrollbar',
+    //                     title: 'essentialsPerfectScrollbar',
     //                     type : 'item',
-    //                     url  : '/documentation/directives/fuse-perfect-scrollbar'
+    //                     url  : '/documentation/directives/essentials-perfect-scrollbar'
     //                 }
     //             ]
     //         },
@@ -1111,16 +1111,16 @@ export const navigation: FuseNavigation[] = [
     //             icon    : 'import_contacts',
     //             children: [
     //                 {
-    //                     id   : 'fuse-config',
-    //                     title: 'Fuse Config',
+    //                     id   : 'essentials-config',
+    //                     title: 'Essentials Config',
     //                     type : 'item',
-    //                     url  : '/documentation/services/fuse-config'
+    //                     url  : '/documentation/services/essentials-config'
     //                 },
     //                 {
-    //                     id   : 'fuse-splash-screen',
-    //                     title: 'Fuse Splash Screen',
+    //                     id   : 'essentials-splash-screen',
+    //                     title: 'Essentials Splash Screen',
     //                     type : 'item',
-    //                     url  : '/documentation/services/fuse-splash-screen'
+    //                     url  : '/documentation/services/essentials-splash-screen'
     //                 }
     //             ]
     //         }

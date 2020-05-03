@@ -5,8 +5,8 @@ import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { FuseSidebarService } from '@fuse/components/sidebar/sidebar.service';
-import { FusePerfectScrollbarDirective } from '@fuse/directives/fuse-perfect-scrollbar/fuse-perfect-scrollbar.directive';
+import { EssentialsSidebarService } from '@essentials/components/sidebar/sidebar.service';
+import { EssentialsPerfectScrollbarDirective } from '@essentials/directives/essentials-perfect-scrollbar/essentials-perfect-scrollbar.directive';
 import { ChatPanelService } from 'app/layout/components/chat-panel/chat-panel.service';
 
 @Component({
@@ -29,11 +29,11 @@ export class ChatPanelComponent implements OnInit, AfterViewInit, OnDestroy
     @ViewChild('replyInput', {static: false})
     private _replyInput: ElementRef;
 
-    @ViewChildren(FusePerfectScrollbarDirective)
-    private _fusePerfectScrollbarDirectives: QueryList<FusePerfectScrollbarDirective>;
+    @ViewChildren(EssentialsPerfectScrollbarDirective)
+    private _EssentialsPerfectScrollbarDirectives: QueryList<EssentialsPerfectScrollbarDirective>;
 
     // Private
-    private _chatViewScrollbar: FusePerfectScrollbarDirective;
+    private _chatViewScrollbar: EssentialsPerfectScrollbarDirective;
     private _unsubscribeAll: Subject<any>;
 
     /**
@@ -41,12 +41,12 @@ export class ChatPanelComponent implements OnInit, AfterViewInit, OnDestroy
      *
      * @param {ChatPanelService} _chatPanelService
      * @param {HttpClient} _httpClient
-     * @param {FuseSidebarService} _fuseSidebarService
+     * @param {EssentialsSidebarService} _essentialsSidebarService
      */
     constructor(
         private _chatPanelService: ChatPanelService,
         private _httpClient: HttpClient,
-        private _fuseSidebarService: FuseSidebarService
+        private _essentialsSidebarService: EssentialsSidebarService
     )
     {
         // Set the defaults
@@ -74,7 +74,7 @@ export class ChatPanelComponent implements OnInit, AfterViewInit, OnDestroy
         });
 
         // Subscribe to the foldedChanged observable
-        this._fuseSidebarService.getSidebar('chatPanel').foldedChanged
+        this._essentialsSidebarService.getSidebar('chatPanel').foldedChanged
             .pipe(takeUntil(this._unsubscribeAll))
             .subscribe((folded) => {
                 this.sidebarFolded = folded;
@@ -86,7 +86,7 @@ export class ChatPanelComponent implements OnInit, AfterViewInit, OnDestroy
      */
     ngAfterViewInit(): void
     {
-        this._chatViewScrollbar = this._fusePerfectScrollbarDirectives.find((directive) => {
+        this._chatViewScrollbar = this._EssentialsPerfectScrollbarDirectives.find((directive) => {
             return directive.elementRef.nativeElement.id === 'messages';
         });
     }
@@ -136,7 +136,7 @@ export class ChatPanelComponent implements OnInit, AfterViewInit, OnDestroy
      */
     foldSidebarTemporarily(): void
     {
-        this._fuseSidebarService.getSidebar('chatPanel').foldTemporarily();
+        this._essentialsSidebarService.getSidebar('chatPanel').foldTemporarily();
     }
 
     /**
@@ -144,7 +144,7 @@ export class ChatPanelComponent implements OnInit, AfterViewInit, OnDestroy
      */
     unfoldSidebarTemporarily(): void
     {
-        this._fuseSidebarService.getSidebar('chatPanel').unfoldTemporarily();
+        this._essentialsSidebarService.getSidebar('chatPanel').unfoldTemporarily();
     }
 
     /**
@@ -152,7 +152,7 @@ export class ChatPanelComponent implements OnInit, AfterViewInit, OnDestroy
      */
     toggleSidebarOpen(): void
     {
-        this._fuseSidebarService.getSidebar('chatPanel').toggleOpen();
+        this._essentialsSidebarService.getSidebar('chatPanel').toggleOpen();
     }
 
     /**

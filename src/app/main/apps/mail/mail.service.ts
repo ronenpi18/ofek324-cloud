@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
 
-import { FuseUtils } from '@fuse/utils';
+import { EssentialsUtils } from '@essentials/utils';
 
 import { Mail } from 'app/main/apps/mail/mail.model';
 
@@ -189,7 +189,7 @@ export class MailService implements Resolve<any>
                                 return new Mail(mail);
                             });
 
-                            this.mails = FuseUtils.filterArrayByString(this.mails, this.searchText);
+                            this.mails = EssentialsUtils.filterArrayByString(this.mails, this.searchText);
 
                             this.onMailsChanged.next(this.mails);
 
@@ -217,7 +217,7 @@ export class MailService implements Resolve<any>
                         return new Mail(mail);
                     });
 
-                    this.mails = FuseUtils.filterArrayByString(this.mails, this.searchText);
+                    this.mails = EssentialsUtils.filterArrayByString(this.mails, this.searchText);
 
                     this.onMailsChanged.next(this.mails);
 
@@ -248,7 +248,7 @@ export class MailService implements Resolve<any>
                                 return new Mail(mail);
                             });
 
-                            this.mails = FuseUtils.filterArrayByString(this.mails, this.searchText);
+                            this.mails = EssentialsUtils.filterArrayByString(this.mails, this.searchText);
 
                             this.onMailsChanged.next(this.mails);
 

@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 
-import { FuseSharedModule } from '@fuse/shared.module';
-import { FuseHighlightModule } from '@fuse/components';
+import { EssentialsSharedModule } from '@essentials/shared.module';
+import { EssentialsHighlightModule } from '@essentials/components';
 
 import { DocsGettingStartedIntroductionComponent } from 'app/main/documentation/getting-started/introduction/introduction.component';
 import { DocsGettingStartedInstallationComponent } from 'app/main/documentation/getting-started/installation/installation.component';
@@ -29,8 +29,8 @@ const routes = [
 
         MatIconModule,
 
-        FuseSharedModule,
-        FuseHighlightModule
+        EssentialsSharedModule,
+        EssentialsHighlightModule
     ]
 })
 export class GettingStartedModule

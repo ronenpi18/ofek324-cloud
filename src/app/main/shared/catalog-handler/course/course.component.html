@@ -1,10 +1,10 @@
 <div id="academy-course" class="page-layout simple left-sidebar inner-scroll">
 
     <!-- SIDEBAR -->
-    <fuse-sidebar class="sidebar" name="academy-course-left-sidebar-1" position="left" lockedOpen="gt-md">
+    <essentials-sidebar class="sidebar" name="academy-course-left-sidebar-1" position="left" lockedOpen="gt-md">
 
         <!-- SIDEBAR CONTENT -->
-        <div class="content" fusePerfectScrollbar>
+        <div class="content" essentialsPerfectScrollbar>
 
             <div class="steps">
 
@@ -23,7 +23,7 @@
         </div>
         <!-- / SIDEBAR CONTENT -->
 
-    </fuse-sidebar>
+    </essentials-sidebar>
     <!-- / SIDEBAR -->
 
     <!-- CENTER -->
@@ -53,7 +53,7 @@
 
             <ng-container *ngFor="let step of course.steps; let i = index;">
 
-                <div class="course-step" fusePerfectScrollbar
+                <div class="course-step" essentialsPerfectScrollbar
                      *ngIf="currentStep === i"
                      [@slideIn]="animationDirection">
 
@@ -68,14 +68,14 @@
 
         <div class="step-navigation">
 
-            <button mat-fab class="previous mat-accent fuse-white-fg"
+            <button mat-fab class="previous mat-accent essentials-white-fg"
                     (click)="gotoPreviousStep()"
                     [disabled]="currentStep === 0"
                     [fxHide]="currentStep === 0">
                 <mat-icon>chevron_left</mat-icon>
             </button>
 
-            <button mat-fab class="next mat-accent fuse-white-fg"
+            <button mat-fab class="next mat-accent essentials-white-fg"
                     (click)="gotoNextStep()"
                     [disabled]="currentStep === course.totalSteps - 1"
                     [fxHide]="currentStep === course.totalSteps - 1">

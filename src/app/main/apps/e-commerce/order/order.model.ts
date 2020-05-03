@@ -1,4 +1,4 @@
-import { FuseUtils } from '@fuse/utils';
+import { EssentialsUtils } from '@essentials/utils';
 
 export class Order
 {
@@ -23,8 +23,8 @@ export class Order
     constructor(order?)
     {
         order = order || {};
-        this.id = order.id || FuseUtils.generateGUID();
-        this.reference = order.reference || FuseUtils.generateGUID();
+        this.id = order.id || EssentialsUtils.generateGUID();
+        this.reference = order.reference || EssentialsUtils.generateGUID();
         this.subtotal = order.subtotal || 0;
         this.tax = order.tax || 0;
         this.discount = order.discount || 0;

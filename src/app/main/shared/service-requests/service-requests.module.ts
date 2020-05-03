@@ -18,8 +18,8 @@ import {MatTableModule} from "@angular/material/table";
 import {MatTabsModule} from "@angular/material/tabs";
 import {NgxChartsModule} from "@swimlane/ngx-charts";
 import {AgmCoreModule} from "@agm/core";
-import {FuseSharedModule} from "../../../../@fuse/shared.module";
-import {FuseWidgetModule} from "../../../../@fuse/components";
+import {EssentialsSharedModule} from "../../../../@essentials/shared.module";
+import {EssentialsWidgetModule} from "../../../../@essentials/components";
 import {EcommerceProductsComponent} from "../../apps/e-commerce/products/products.component";
 import {EcommerceProductsService} from "../../apps/e-commerce/products/products.service";
 import {EcommerceProductComponent} from "../../apps/e-commerce/product/product.component";
@@ -72,8 +72,8 @@ const routes: Routes = [
           apiKey: 'AIzaSyD81ecsCj4yYpcXSLFcYU97PvRsE_X8Bx8'
       }),
 
-      FuseSharedModule,
-      FuseWidgetModule
+      EssentialsSharedModule,
+      EssentialsWidgetModule
   ],
     exports: [
         ServiceRequestsComponent

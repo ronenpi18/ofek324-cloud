@@ -2,35 +2,35 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 
-import { FuseSharedModule } from '@fuse/shared.module';
-import { FuseHighlightModule } from '@fuse/components/index';
+import { EssentialsSharedModule } from '@essentials/shared.module';
+import { EssentialsHighlightModule } from '@essentials/components/index';
 
-import { FuseConfigServiceDocsComponent } from 'app/main/documentation/services/fuse-config/fuse-config.component';
-import { FuseSplashScreenServiceDocsComponent } from 'app/main/documentation/services/fuse-splash-screen/fuse-splash-screen.component';
+import { EssentialsConfigServiceDocsComponent } from 'app/main/documentation/services/essentials-config/essentials-config.component';
+import { EssentialsSplashScreenServiceDocsComponent } from 'app/main/documentation/services/essentials-splash-screen/essentials-splash-screen.component';
 
 const routes = [
     {
-        path     : 'fuse-config',
-        component: FuseConfigServiceDocsComponent
+        path     : 'essentials-config',
+        component: EssentialsConfigServiceDocsComponent
     },
     {
-        path     : 'fuse-splash-screen',
-        component: FuseSplashScreenServiceDocsComponent
+        path     : 'essentials-splash-screen',
+        component: EssentialsSplashScreenServiceDocsComponent
     }
 ];
 
 @NgModule({
     declarations: [
-        FuseConfigServiceDocsComponent,
-        FuseSplashScreenServiceDocsComponent
+        EssentialsConfigServiceDocsComponent,
+        EssentialsSplashScreenServiceDocsComponent
     ],
     imports     : [
         RouterModule.forChild(routes),
 
         MatIconModule,
 
-        FuseSharedModule,
-        FuseHighlightModule
+        EssentialsSharedModule,
+        EssentialsHighlightModule
     ]
 })
 

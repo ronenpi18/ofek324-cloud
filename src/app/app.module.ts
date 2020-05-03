@@ -10,11 +10,11 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { TranslateModule } from '@ngx-translate/core';
 import 'hammerjs';
 
-import { FuseModule } from '@fuse/fuse.module';
-import { FuseSharedModule } from '@fuse/shared.module';
-import { FuseProgressBarModule, FuseSidebarModule, FuseThemeOptionsModule } from '@fuse/components';
+import { EssentialsModule } from '@essentials/essentials.module';
+import { EssentialsSharedModule } from '@essentials/shared.module';
+import { EssentialsProgressBarModule, EssentialsSidebarModule, EssentialsThemeOptionsModule } from '@essentials/components';
 
-import { fuseConfig } from 'app/fuse-config';
+import { fuseConfig } from 'app/essentials-config';
 
 import { FakeDbService } from 'app/fake-db/fake-db.service';
 import { AppComponent } from 'app/app.component';
@@ -86,12 +86,12 @@ const appRoutes: Routes = [
         MatButtonModule,
         MatIconModule,
 
-        // Fuse modules
-        FuseModule.forRoot(fuseConfig),
-        FuseProgressBarModule,
-        FuseSharedModule,
-        FuseSidebarModule,
-        FuseThemeOptionsModule,
+        // @Essentials modules
+        EssentialsModule.forRoot(fuseConfig),
+        EssentialsProgressBarModule,
+        EssentialsSharedModule,
+        EssentialsSidebarModule,
+        EssentialsThemeOptionsModule,
 
         // App modules
         LayoutModule,

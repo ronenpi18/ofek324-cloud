@@ -9,9 +9,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTabsModule } from '@angular/material/tabs';
 
-import { FuseSharedModule } from '@fuse/shared.module';
-import { FuseDemoModule } from '@fuse/components/demo/demo.module';
-import { FuseHighlightModule } from '@fuse/components';
+import { EssentialsSharedModule } from '@essentials/shared.module';
+import { EssentialsDemoModule } from '@essentials/components/demo/demo.module';
+import { EssentialsHighlightModule } from '@essentials/components';
 
 import { CardsComponent } from 'app/main/ui/cards/cards.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
@@ -41,9 +41,9 @@ const routes: Routes = [
 
         NgxChartsModule,
 
-        FuseSharedModule,
-        FuseDemoModule,
-        FuseHighlightModule,
+        EssentialsSharedModule,
+        EssentialsDemoModule,
+        EssentialsHighlightModule,
     ]
 })
 export class UICardsModule

@@ -12,8 +12,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { TranslateModule } from '@ngx-translate/core';
 
-import { FuseSharedModule } from '@fuse/shared.module';
-import { FuseSidebarModule } from '@fuse/components';
+import { EssentialsSharedModule } from '@essentials/shared.module';
+import { EssentialsSidebarModule } from '@essentials/components';
 
 import { MailService } from 'app/main/apps/mail/mail.service';
 import { MailComponent } from 'app/main/apps/mail/mail.component';
@@ -97,8 +97,8 @@ const routes: Routes = [
 
         TranslateModule,
 
-        FuseSharedModule,
-        FuseSidebarModule
+        EssentialsSharedModule,
+        EssentialsSidebarModule
     ],
     providers      : [
         MailService

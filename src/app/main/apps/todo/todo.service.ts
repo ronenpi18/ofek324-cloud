@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
-import { FuseUtils } from '@fuse/utils';
+import { EssentialsUtils } from '@essentials/utils';
 
 import { Todo } from 'app/main/apps/todo/todo.model';
 
@@ -167,7 +167,7 @@ export class TodoService implements Resolve<any>
                         return new Todo(todo);
                     });
 
-                    this.todos = FuseUtils.filterArrayByString(this.todos, this.searchText);
+                    this.todos = EssentialsUtils.filterArrayByString(this.todos, this.searchText);
 
                     this.onTodosChanged.next(this.todos);
 
@@ -201,7 +201,7 @@ export class TodoService implements Resolve<any>
                         return new Todo(todo);
                     });
 
-                    this.todos = FuseUtils.filterArrayByString(this.todos, this.searchText);
+                    this.todos = EssentialsUtils.filterArrayByString(this.todos, this.searchText);
 
                     this.onTodosChanged.next(this.todos);
 
@@ -232,7 +232,7 @@ export class TodoService implements Resolve<any>
                                 return new Todo(todo);
                             });
 
-                            this.todos = FuseUtils.filterArrayByString(this.todos, this.searchText);
+                            this.todos = EssentialsUtils.filterArrayByString(this.todos, this.searchText);
 
                             this.onTodosChanged.next(this.todos);
 

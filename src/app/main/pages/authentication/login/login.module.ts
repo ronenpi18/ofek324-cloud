@@ -6,7 +6,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 
-import { FuseSharedModule } from '@fuse/shared.module';
+import { EssentialsSharedModule } from '@essentials/shared.module';
 
 import { LoginComponent } from 'app/main/pages/authentication/login/login.component';
 
@@ -30,7 +30,7 @@ const routes = [
         MatIconModule,
         MatInputModule,
 
-        FuseSharedModule
+        EssentialsSharedModule
     ]
 })
 export class LoginModule

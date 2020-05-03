@@ -1,6 +1,6 @@
 import {Component, Input, OnDestroy, OnInit, ViewEncapsulation} from '@angular/core';
 
-import { fuseAnimations } from '@fuse/animations';
+import { fuseAnimations } from '@essentials/animations';
 
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';

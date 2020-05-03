@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { FuseNavigationService } from '@fuse/components/navigation/navigation.service';
+import { EssentialsNavigationService } from '@essentials/components/navigation/navigation.service';
 
 @Component({
     selector   : 'docs-components-navigation',
@@ -16,7 +16,7 @@ export class DocsComponentsNavigationComponent
      * Constructor
      */
     constructor(
-        private _fuseNavigationService: FuseNavigationService
+        private _essentialsNavigationService: EssentialsNavigationService
     )
     {
         // Set the defaults
@@ -36,7 +36,7 @@ export class DocsComponentsNavigationComponent
         this.hidden = !this.hidden;
 
         // Update the calendar menu item
-        this._fuseNavigationService.updateNavigationItem('calendar', {
+        this._essentialsNavigationService.updateNavigationItem('calendar', {
             hidden: this.hidden
         });
     }
@@ -47,7 +47,7 @@ export class DocsComponentsNavigationComponent
     updateMailBadge(): void
     {
         // Update the badge title
-        this._fuseNavigationService.updateNavigationItem('mail', {
+        this._essentialsNavigationService.updateNavigationItem('mail', {
                 badge: {
                     title: 35
                 }
@@ -67,7 +67,7 @@ export class DocsComponentsNavigationComponent
             url  : '/apps/calendar'
         };
 
-        this._fuseNavigationService.updateNavigationItem('calendar', {
+        this._essentialsNavigationService.updateNavigationItem('calendar', {
             type: 'collapsable',
             children: [
                 newNavItem
@@ -91,7 +91,7 @@ export class DocsComponentsNavigationComponent
         };
 
         // Add the new nav item at the beginning of the navigation
-        this._fuseNavigationService.addNavigationItem(newNavItem, 'start');
+        this._essentialsNavigationService.addNavigationItem(newNavItem, 'start');
     }
 
     /**
@@ -99,7 +99,7 @@ export class DocsComponentsNavigationComponent
      */
     removeDashboards(): void
     {
-        this._fuseNavigationService.removeNavigationItem('dashboards');
+        this._essentialsNavigationService.removeNavigationItem('dashboards');
     }
 
     /**
@@ -155,9 +155,9 @@ export class DocsComponentsNavigationComponent
         ];
 
         // Register the new navigation
-        this._fuseNavigationService.register('admin-nav', adminNav);
+        this._essentialsNavigationService.register('admin-nav', adminNav);
 
         // Set the current navigation
-        this._fuseNavigationService.setCurrentNavigation('admin-nav');
+        this._essentialsNavigationService.setCurrentNavigation('admin-nav');
     }
 }

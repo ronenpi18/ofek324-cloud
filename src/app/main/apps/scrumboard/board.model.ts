@@ -1,4 +1,4 @@
-import { FuseUtils } from '@fuse/utils';
+import { EssentialsUtils } from '@essentials/utils';
 
 import { List } from './list.model';
 import { Card } from './card.model';
@@ -76,7 +76,7 @@ export class Board
     {
         this.name = board.name || 'Untitled Board';
         this.uri = board.uri || 'untitled-board';
-        this.id = board.id || FuseUtils.generateGUID();
+        this.id = board.id || EssentialsUtils.generateGUID();
         this.settings = board.settings || {
             color          : '',
             subscribed     : true,

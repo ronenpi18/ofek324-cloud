@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 
-import { FuseSharedModule } from '@fuse/shared.module';
-import { FuseHighlightModule } from '@fuse/components';
+import { EssentialsSharedModule } from '@essentials/shared.module';
+import { EssentialsHighlightModule } from '@essentials/components';
 
 import { HelperClassesComponent } from 'app/main/ui/helper-classes/helper-classes.component';
 import { HelperClassesPaddingMarginComponent } from 'app/main/ui/helper-classes/tabs/padding-margin/padding-margin.component';
@@ -29,8 +29,8 @@ const routes: Routes = [
         MatIconModule,
         MatTabsModule,
 
-        FuseSharedModule,
-        FuseHighlightModule,
+        EssentialsSharedModule,
+        EssentialsHighlightModule,
     ],
 })
 export class UIHelperClassesModule

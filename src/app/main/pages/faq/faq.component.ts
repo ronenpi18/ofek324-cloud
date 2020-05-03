@@ -3,7 +3,7 @@ import { FormControl } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, takeUntil } from 'rxjs/operators';
 
-import { FuseUtils } from '@fuse/utils';
+import { EssentialsUtils } from '@essentials/utils';
 
 import { FaqService } from 'app/main/pages/faq/faq.service';
 
@@ -63,7 +63,7 @@ export class FaqComponent implements OnInit, OnDestroy
                 distinctUntilChanged()
             )
             .subscribe(searchText => {
-                this.faqsFiltered = FuseUtils.filterArrayByString(this.faqs, searchText);
+                this.faqsFiltered = EssentialsUtils.filterArrayByString(this.faqs, searchText);
             });
     }
 

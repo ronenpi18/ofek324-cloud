@@ -11,8 +11,8 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatTableModule} from "@angular/material/table";
 import {MatTabsModule} from "@angular/material/tabs";
 import {NgxChartsModule} from "@swimlane/ngx-charts";
-import {FuseSharedModule} from "../../../../../@fuse/shared.module";
-import {FuseSidebarModule, FuseWidgetModule} from "../../../../../@fuse/components";
+import {EssentialsSharedModule} from "../../../../../@essentials/shared.module";
+import {EssentialsSidebarModule, EssentialsWidgetModule} from "../../../../../@essentials/components";
 import {RouterModule, Routes} from "@angular/router";
 import {StepsCourseModule} from "../course/steps-course.module";
 import {HomeService} from "../../../home/home.service";
@@ -44,9 +44,9 @@ const routes: Routes = [
         MatTableModule,
         MatTabsModule,
         NgxChartsModule,
-        FuseSharedModule,
-        FuseSidebarModule,
-        FuseWidgetModule,
+        EssentialsSharedModule,
+        EssentialsSidebarModule,
+        EssentialsWidgetModule,
         MatInputModule
     ],
     exports: [

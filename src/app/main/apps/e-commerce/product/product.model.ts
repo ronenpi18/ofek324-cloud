@@ -1,6 +1,6 @@
 import { MatChipInputEvent } from '@angular/material/chips';
 
-import { FuseUtils } from '@fuse/utils';
+import { EssentialsUtils } from '@essentials/utils';
 
 export class Product
 {
@@ -37,9 +37,9 @@ export class Product
     constructor(product?)
     {
         product = product || {};
-        this.id = product.id || FuseUtils.generateGUID();
+        this.id = product.id || EssentialsUtils.generateGUID();
         this.name = product.name || '';
-        this.handle = product.handle || FuseUtils.handleize(this.name);
+        this.handle = product.handle || EssentialsUtils.handleize(this.name);
         this.description = product.description || '';
         this.categories = product.categories || [];
         this.tags = product.tags || [];

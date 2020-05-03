@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 
-import { FuseSidebarModule, FuseThemeOptionsModule } from '@fuse/components';
-import { FuseSharedModule } from '@fuse/shared.module';
+import { EssentialsSidebarModule, EssentialsThemeOptionsModule } from '@essentials/components';
+import { EssentialsSharedModule } from '@essentials/shared.module';
 
 import { ChatPanelModule } from 'app/layout/components/chat-panel/chat-panel.module';
 import { ContentModule } from 'app/layout/components/content/content.module';
@@ -20,9 +20,9 @@ import { HorizontalLayout1Component } from 'app/layout/horizontal/layout-1/layou
     imports     : [
         MatSidenavModule,
 
-        FuseSharedModule,
-        FuseSidebarModule,
-        FuseThemeOptionsModule,
+        EssentialsSharedModule,
+        EssentialsSidebarModule,
+        EssentialsThemeOptionsModule,
 
         ChatPanelModule,
         ContentModule,

@@ -16,8 +16,8 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { AgmCoreModule } from '@agm/core';
 
-import { FuseSharedModule } from '@fuse/shared.module';
-import { FuseWidgetModule } from '@fuse/components/widget/widget.module';
+import { EssentialsSharedModule } from '@essentials/shared.module';
+import { EssentialsWidgetModule } from '@essentials/components/widget/widget.module';
 
 import { EcommerceProductsComponent } from 'app/main/apps/e-commerce/products/products.component';
 import { EcommerceProductsService } from 'app/main/apps/e-commerce/products/products.service';
@@ -98,8 +98,8 @@ const routes: Routes = [
             apiKey: 'AIzaSyD81ecsCj4yYpcXSLFcYU97PvRsE_X8Bx8'
         }),
 
-        FuseSharedModule,
-        FuseWidgetModule
+        EssentialsSharedModule,
+        EssentialsWidgetModule
     ],
     providers   : [
         EcommerceProductsService,

@@ -1,4 +1,4 @@
-import { FuseUtils } from '@fuse/utils';
+import { EssentialsUtils } from '@essentials/utils';
 
 export class Contact
 {
@@ -23,7 +23,7 @@ export class Contact
     constructor(contact)
     {
         {
-            this.id = contact.id || FuseUtils.generateGUID();
+            this.id = contact.id || EssentialsUtils.generateGUID();
             this.name = contact.name || '';
             this.lastName = contact.lastName || '';
             this.avatar = contact.avatar || 'assets/images/avatars/profile.jpg';
