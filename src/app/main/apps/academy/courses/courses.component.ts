@@ -2,7 +2,7 @@ import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 
 import { AcademyCoursesService } from 'app/main/apps/academy/courses.service';
 import {HomeService} from "../../../home/home.service";
@@ -11,7 +11,7 @@ import {HomeService} from "../../../home/home.service";
     selector   : 'academy-courses',
     templateUrl: './courses.component.html',
     styleUrls  : ['./courses.component.scss'],
-    animations : fuseAnimations
+    animations : essentialsAnimations
 })
 export class AcademyCoursesComponent implements OnInit, OnDestroy
 {

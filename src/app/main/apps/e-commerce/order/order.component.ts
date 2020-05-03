@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Subject} from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 
 import { orderStatuses } from 'app/main/apps/e-commerce/order/order-statuses';
 import { Order } from 'app/main/apps/e-commerce/order/order.model';
@@ -14,7 +14,7 @@ import { EcommerceOrderService } from 'app/main/apps/e-commerce/order/order.serv
     templateUrl  : './order.component.html',
     styleUrls    : ['./order.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class EcommerceOrderComponent implements OnInit, OnDestroy
 {

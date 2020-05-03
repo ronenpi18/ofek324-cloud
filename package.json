@@ -1,7 +1,7 @@
 {
-    "name": "fuse",
-    "version": "8.0.0",
-    "license": "https://themeforest.net/licenses/terms/regular",
+    "name": "ofek cloud",
+    "version": "9.0.0",
+    "license": "ronen pinhasov",
     "scripts": {
         "ng": "ng",
         "start": "ng serve --open",

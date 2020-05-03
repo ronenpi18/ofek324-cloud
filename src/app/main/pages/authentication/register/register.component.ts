@@ -4,14 +4,14 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/internal/operators';
 
 import { EssentialsConfigService } from '@essentials/services/config.service';
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 
 @Component({
     selector     : 'register',
     templateUrl  : './register.component.html',
     styleUrls    : ['./register.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class RegisterComponent implements OnInit, OnDestroy
 {

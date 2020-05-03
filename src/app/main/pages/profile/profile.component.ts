@@ -1,13 +1,13 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 
 @Component({
     selector     : 'profile',
     templateUrl  : './profile.component.html',
     styleUrls    : ['./profile.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class ProfileComponent
 {

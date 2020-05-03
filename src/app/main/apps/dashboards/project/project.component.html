@@ -43,7 +43,7 @@
 
                 <mat-tab label="Home">
 
-                    <div class="widget-group p-12" fxLayout="row wrap" fxFlex="100" *fuseIfOnDom
+                    <div class="widget-group p-12" fxLayout="row wrap" fxFlex="100" *essentialsIfOnDom
                          [@animateStagger]="{value:'50'}">
 
                         <!-- WIDGET 1 -->
@@ -64,7 +64,7 @@
                                             </mat-option>
                                         </mat-select>
                                     </mat-form-field>
-                                    <button mat-icon-button fuseWidgetToggle aria-label="more">
+                                    <button mat-icon-button essentialsWidgetToggle aria-label="more">
                                         <mat-icon>more_vert</mat-icon>
                                     </button>
                                 </div>
@@ -90,7 +90,7 @@
 
                             <!-- Back -->
                             <div class="essentials-widget-back p-16 pt-32">
-                                <button mat-icon-button fuseWidgetToggle class="essentials-widget-flip-button"
+                                <button mat-icon-button essentialsWidgetToggle class="essentials-widget-flip-button"
                                         aria-label="Flip widget">
                                     <mat-icon class="s-16">close</mat-icon>
                                 </button>
@@ -114,7 +114,7 @@
                                      fxLayoutAlign="space-between center">
                                     <div class="h3">{{widgets.widget2.title}}</div>
 
-                                    <button mat-icon-button fuseWidgetToggle class="essentials-widget-flip-button"
+                                    <button mat-icon-button essentialsWidgetToggle class="essentials-widget-flip-button"
                                             aria-label="more">
                                         <mat-icon>more_vert</mat-icon>
                                     </button>
@@ -139,7 +139,7 @@
 
                             <!-- Back -->
                             <div class="essentials-widget-back p-16 pt-32">
-                                <button mat-icon-button fuseWidgetToggle class="essentials-widget-flip-button"
+                                <button mat-icon-button essentialsWidgetToggle class="essentials-widget-flip-button"
                                         aria-label="Flip widget">
                                     <mat-icon class="s-16">close</mat-icon>
                                 </button>
@@ -163,7 +163,7 @@
                                      fxLayoutAlign="space-between center">
                                     <div class="h3">{{widgets.widget3.title}}</div>
 
-                                    <button mat-icon-button fuseWidgetToggle class="essentials-widget-flip-button"
+                                    <button mat-icon-button essentialsWidgetToggle class="essentials-widget-flip-button"
                                             aria-label="more">
                                         <mat-icon>more_vert</mat-icon>
                                     </button>
@@ -188,7 +188,7 @@
 
                             <!-- Back -->
                             <div class="essentials-widget-back p-16 pt-32">
-                                <button mat-icon-button fuseWidgetToggle class="essentials-widget-flip-button"
+                                <button mat-icon-button essentialsWidgetToggle class="essentials-widget-flip-button"
                                         aria-label="Flip widget">
                                     <mat-icon class="s-16">close</mat-icon>
                                 </button>
@@ -212,7 +212,7 @@
                                      fxLayoutAlign="space-between center">
                                     <div class="h3">{{widgets.widget4.title}}</div>
 
-                                    <button mat-icon-button fuseWidgetToggle class="essentials-widget-flip-button"
+                                    <button mat-icon-button essentialsWidgetToggle class="essentials-widget-flip-button"
                                             aria-label="more">
                                         <mat-icon>more_vert</mat-icon>
                                     </button>
@@ -237,7 +237,7 @@
 
                             <!-- Back -->
                             <div class="essentials-widget-back p-16 pt-32">
-                                <button mat-icon-button fuseWidgetToggle class="essentials-widget-flip-button"
+                                <button mat-icon-button essentialsWidgetToggle class="essentials-widget-flip-button"
                                         aria-label="Flip widget">
                                     <mat-icon class="s-16">close</mat-icon>
                                 </button>
@@ -277,7 +277,7 @@
 
                                     <div class="h-420 my-16" fxLayout="row" fxFlex="100" fxFlex.gt-sm="50">
                                         <ngx-charts-bar-vertical-stacked
-                                            *fuseIfOnDom
+                                            *essentialsIfOnDom
                                             [scheme]="widget5.scheme"
                                             [results]="this.widgets.widget5.mainChart[this.widget5.currentRange]"
                                             [gradient]="widget5.gradient"
@@ -307,7 +307,7 @@
 
                                             <div class="h-64">
                                                 <ngx-charts-area-chart
-                                                    *fuseIfOnDom
+                                                    *essentialsIfOnDom
                                                     [results]="widget.value.chart[widget5.currentRange]"
                                                     [scheme]="widget5.supporting.scheme"
                                                     [gradient]="widget5.supporting.gradient"
@@ -353,7 +353,7 @@
 
                                 <div class="h-400">
                                     <ngx-charts-pie-chart
-                                        *fuseIfOnDom
+                                        *essentialsIfOnDom
                                         [scheme]="widget6.scheme"
                                         [results]="widgets.widget6.mainChart[widget6.currentRange]"
                                         [legend]="widget6.showLegend"
@@ -440,7 +440,7 @@
                 <mat-tab label="Budget Summary">
 
                     <!-- WIDGET GROUP -->
-                    <div class="widget-group" fxLayout="row wrap" fxFlex="100" *fuseIfOnDom
+                    <div class="widget-group" fxLayout="row wrap" fxFlex="100" *essentialsIfOnDom
                          [@animateStagger]="{value:'50'}">
 
                         <!-- WIDGET 8 -->
@@ -457,7 +457,7 @@
 
                                 <div class="h-400">
                                     <ngx-charts-pie-chart
-                                        *fuseIfOnDom
+                                        *essentialsIfOnDom
                                         [scheme]="widget8.scheme"
                                         [results]="widgets.widget8.mainChart"
                                         [legend]="widget8.legend"
@@ -506,7 +506,7 @@
                                     </div>
                                     <div class="h-52" fxFlex>
                                         <ngx-charts-area-chart
-                                            *fuseIfOnDom
+                                            *essentialsIfOnDom
                                             [results]="widgets.widget9.weeklySpent.chart[widget9.currentRange]"
                                             [scheme]="widget9.scheme"
                                             [gradient]="widget9.gradient"
@@ -534,7 +534,7 @@
                                     </div>
                                     <div class="h-52" fxFlex>
                                         <ngx-charts-area-chart
-                                            *fuseIfOnDom
+                                            *essentialsIfOnDom
                                             [results]="widgets.widget9.totalSpent.chart[widget9.currentRange]"
                                             [scheme]="widget9.scheme"
                                             [gradient]="widget9.gradient"
@@ -562,7 +562,7 @@
                                     </div>
                                     <div class="h-52" fxFlex>
                                         <ngx-charts-area-chart
-                                            *fuseIfOnDom
+                                            *essentialsIfOnDom
                                             [results]="widgets.widget9.remaining.chart[widget9.currentRange]"
                                             [scheme]="widget9.scheme"
                                             [gradient]="widget9.gradient"
@@ -642,7 +642,7 @@
                 <mat-tab label="Team Members">
 
                     <!-- WIDGET GROUP -->
-                    <div class="widget-group" fxLayout="row wrap" fxFlex="100" *fuseIfOnDom
+                    <div class="widget-group" fxLayout="row wrap" fxFlex="100" *essentialsIfOnDom
                          [@animateStagger]="{value:'50'}">
 
                         <!-- WIDGET 11 -->

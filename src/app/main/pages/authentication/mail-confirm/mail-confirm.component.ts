@@ -1,14 +1,14 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 import { EssentialsConfigService } from '@essentials/services/config.service';
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 
 @Component({
     selector     : 'mail-confirm',
     templateUrl  : './mail-confirm.component.html',
     styleUrls    : ['./mail-confirm.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class MailConfirmComponent
 {

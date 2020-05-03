@@ -17,7 +17,7 @@ const routes: Routes = [
         loadChildren: './getting-started/getting-started.module#GettingStartedModule'
     },
     {
-        path        : 'working-with-fuse',
+        path        : 'working-with-essentials',
         loadChildren: './working-with-essentials/working-with-essentials.module#WorkingWithEssentialsModule'
     },
     {

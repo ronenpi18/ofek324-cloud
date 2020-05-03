@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 import { EssentialsSidebarService } from '@essentials/components/sidebar/sidebar.service';
 
 import { FileManagerService } from 'app/main/apps/file-manager/file-manager.service';
@@ -12,7 +12,7 @@ import { FileManagerService } from 'app/main/apps/file-manager/file-manager.serv
     templateUrl  : './file-manager.component.html',
     styleUrls    : ['./file-manager.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class FileManagerComponent implements OnInit, OnDestroy
 {

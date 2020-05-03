@@ -4,14 +4,14 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/internal/operators';
 
 import { EssentialsConfigService } from '@essentials/services/config.service';
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 
 @Component({
     selector     : 'reset-password-2',
     templateUrl  : './reset-password-2.component.html',
     styleUrls    : ['./reset-password-2.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class ResetPassword2Component implements OnInit, OnDestroy
 {

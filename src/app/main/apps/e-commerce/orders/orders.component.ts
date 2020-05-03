@@ -5,7 +5,7 @@ import { DataSource } from '@angular/cdk/collections';
 import { BehaviorSubject, fromEvent, merge, Observable, Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 import { EssentialsUtils } from '@essentials/utils';
 
 import { takeUntil } from 'rxjs/internal/operators';
@@ -15,7 +15,7 @@ import {RequestsService} from "../../../shared/service-requests/requests.service
     selector     : 'e-commerce-orders',
     templateUrl  : './orders.component.html',
     styleUrls    : ['./orders.component.scss'],
-    animations   : fuseAnimations,
+    animations   : essentialsAnimations,
     encapsulation: ViewEncapsulation.None
 })
 export class EcommerceOrdersComponent implements OnInit, OnDestroy

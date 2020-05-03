@@ -928,7 +928,7 @@ export const navigation: EssentialsNavigation[] = [
     //             ]
     //         },
     //         {
-    //             id      : 'working-with-fuse',
+    //             id      : 'working-with-essentials',
     //             title   : 'Working with Essentials',
     //             type    : 'collapsable',
     //             icon    : 'import_contacts',
@@ -937,49 +937,49 @@ export const navigation: EssentialsNavigation[] = [
     //                     id   : 'server',
     //                     title: 'Server',
     //                     type : 'item',
-    //                     url  : '/documentation/working-with-fuse/server'
+    //                     url  : '/documentation/working-with-essentials/server'
     //                 },
     //                 {
     //                     id   : 'production',
     //                     title: 'Production',
     //                     type : 'item',
-    //                     url  : '/documentation/working-with-fuse/production'
+    //                     url  : '/documentation/working-with-essentials/production'
     //                 },
     //                 {
     //                     id   : 'directory-structure',
     //                     title: 'Directory Structure',
     //                     type : 'item',
-    //                     url  : '/documentation/working-with-fuse/directory-structure'
+    //                     url  : '/documentation/working-with-essentials/directory-structure'
     //                 },
     //                 {
-    //                     id   : 'updating-fuse',
+    //                     id   : 'updating-essentials',
     //                     title: 'Updating Essentials',
     //                     type : 'item',
-    //                     url  : '/documentation/working-with-fuse/updating-fuse'
+    //                     url  : '/documentation/working-with-essentials/updating-essentials'
     //                 },
     //                 {
     //                     id   : 'multi-language',
     //                     title: 'Multi Language',
     //                     type : 'item',
-    //                     url  : '/documentation/working-with-fuse/multi-language'
+    //                     url  : '/documentation/working-with-essentials/multi-language'
     //                 },
     //                 {
     //                     id   : 'material-theming',
     //                     title: 'Material Theming',
     //                     type : 'item',
-    //                     url  : '/documentation/working-with-fuse/material-theming'
+    //                     url  : '/documentation/working-with-essentials/material-theming'
     //                 },
     //                 {
     //                     id   : 'theme-layouts',
     //                     title: 'Theme Layouts',
     //                     type : 'item',
-    //                     url  : '/documentation/working-with-fuse/theme-layouts'
+    //                     url  : '/documentation/working-with-essentials/theme-layouts'
     //                 },
     //                 {
     //                     id   : 'page-layouts',
     //                     title: 'Page Layouts',
     //                     type : 'item',
-    //                     url  : '/documentation/working-with-fuse/page-layouts'
+    //                     url  : '/documentation/working-with-essentials/page-layouts'
     //                 }
     //             ]
     //         },
@@ -1080,19 +1080,19 @@ export const navigation: EssentialsNavigation[] = [
     //             children: [
     //                 {
     //                     id   : 'essentials-if-on-dom',
-    //                     title: 'fuseIfOnDom',
+    //                     title: 'essentialsIfOnDom',
     //                     type : 'item',
     //                     url  : '/documentation/directives/essentials-if-on-dom'
     //                 },
     //                 {
     //                     id   : 'essentials-inner-scroll',
-    //                     title: 'fuseInnerScroll',
+    //                     title: 'essentialsInnerScroll',
     //                     type : 'item',
     //                     url  : '/documentation/directives/essentials-inner-scroll'
     //                 },
     //                 {
     //                     id   : 'essentials-mat-sidenav',
-    //                     title: 'fuseMatSidenav',
+    //                     title: 'essentialsMatSidenav',
     //                     type : 'item',
     //                     url  : '/documentation/directives/essentials-mat-sidenav'
     //                 },

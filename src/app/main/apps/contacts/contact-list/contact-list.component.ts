@@ -5,7 +5,7 @@ import { DataSource } from '@angular/cdk/collections';
 import { Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 import { EssentialsConfirmDialogComponent } from '@essentials/components/confirm-dialog/confirm-dialog.component';
 
 import { ContactsService } from 'app/main/apps/contacts/contacts.service';
@@ -16,7 +16,7 @@ import { ContactsContactFormDialogComponent } from 'app/main/apps/contacts/conta
     templateUrl  : './contact-list.component.html',
     styleUrls    : ['./contact-list.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class ContactsContactListComponent implements OnInit, OnDestroy
 {

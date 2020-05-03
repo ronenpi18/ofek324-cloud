@@ -18,7 +18,7 @@ const customAnimation = animation([
     }
 });
 
-export const fuseAnimations = [
+export const essentialsAnimations = [
 
     trigger('animate', [transition('void => *', [useAnimation(customAnimation)])]),
 

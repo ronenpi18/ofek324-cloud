@@ -5,7 +5,7 @@ import { DataSource } from '@angular/cdk/collections';
 import { BehaviorSubject, fromEvent, merge, Observable, Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 import { EssentialsUtils } from '@essentials/utils';
 
 import { EcommerceProductsService } from 'app/main/apps/e-commerce/products/products.service';
@@ -15,7 +15,7 @@ import { takeUntil } from 'rxjs/internal/operators';
     selector     : 'e-commerce-products',
     templateUrl  : './products.component.html',
     styleUrls    : ['./products.component.scss'],
-    animations   : fuseAnimations,
+    animations   : essentialsAnimations,
     encapsulation: ViewEncapsulation.None
 })
 export class EcommerceProductsComponent implements OnInit

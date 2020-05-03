@@ -2,7 +2,7 @@ import { AfterViewInit, ChangeDetectorRef, Component, OnDestroy, OnInit, QueryLi
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 import { EssentialsPerfectScrollbarDirective } from '@essentials/directives/essentials-perfect-scrollbar/essentials-perfect-scrollbar.directive';
 import { EssentialsSidebarService } from '@essentials/components/sidebar/sidebar.service';
 
@@ -13,7 +13,7 @@ import { AcademyCourseService } from 'app/main/apps/academy/course.service';
     templateUrl  : './course.component.html',
     styleUrls    : ['./course.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class AcademyCourseComponent implements OnInit, OnDestroy, AfterViewInit
 {
@@ -23,7 +23,7 @@ export class AcademyCourseComponent implements OnInit, OnDestroy, AfterViewInit
     currentStep: number;
 
     @ViewChildren(EssentialsPerfectScrollbarDirective)
-    fuseScrollbarDirectives: QueryList<EssentialsPerfectScrollbarDirective>;
+    essentialsScrollbarDirectives: QueryList<EssentialsPerfectScrollbarDirective>;
 
     // Private
     private _unsubscribeAll: Subject<any>;
@@ -71,8 +71,8 @@ export class AcademyCourseComponent implements OnInit, OnDestroy, AfterViewInit
      */
     ngAfterViewInit(): void
     {
-        this.courseStepContent = this.fuseScrollbarDirectives.find((fuseScrollbarDirective) => {
-            return fuseScrollbarDirective.elementRef.nativeElement.id === 'course-step-content';
+        this.courseStepContent = this.essentialsScrollbarDirectives.find((essentialsScrollbarDirective) => {
+            return essentialsScrollbarDirective.elementRef.nativeElement.id === 'course-step-content';
         });
     }
 

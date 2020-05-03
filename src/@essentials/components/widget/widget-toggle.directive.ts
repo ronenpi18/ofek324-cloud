@@ -1,7 +1,7 @@
 import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
-    selector: '[fuseWidgetToggle]'
+    selector: '[essentialsWidgetToggle]'
 })
 export class EssentialsWidgetToggleDirective
 {

@@ -2,14 +2,14 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { EssentialsConfigService } from '@essentials/services/config.service';
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 
 @Component({
     selector     : 'coming-soon',
     templateUrl  : './coming-soon.component.html',
     styleUrls    : ['./coming-soon.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class ComingSoonComponent implements OnInit
 {

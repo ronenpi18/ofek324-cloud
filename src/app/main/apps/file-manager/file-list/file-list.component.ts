@@ -3,7 +3,7 @@ import { DataSource } from '@angular/cdk/collections';
 import { Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 import { EssentialsSidebarService } from '@essentials/components/sidebar/sidebar.service';
 
 import { FileManagerService } from 'app/main/apps/file-manager/file-manager.service';
@@ -13,7 +13,7 @@ import { FileManagerService } from 'app/main/apps/file-manager/file-manager.serv
     templateUrl  : './file-list.component.html',
     styleUrls    : ['./file-list.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class FileManagerFileListComponent implements OnInit, OnDestroy
 {

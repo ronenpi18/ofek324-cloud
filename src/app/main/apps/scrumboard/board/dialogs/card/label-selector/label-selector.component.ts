@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnDestroy, OnInit, Output, ViewEncapsul
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 import { EssentialsUtils } from '@essentials/utils';
 
 import { ScrumboardService } from 'app/main/apps/scrumboard/scrumboard.service';
@@ -12,7 +12,7 @@ import { ScrumboardService } from 'app/main/apps/scrumboard/scrumboard.service';
     templateUrl  : './label-selector.component.html',
     styleUrls    : ['./label-selector.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 
 export class ScrumboardLabelSelectorComponent implements OnInit, OnDestroy

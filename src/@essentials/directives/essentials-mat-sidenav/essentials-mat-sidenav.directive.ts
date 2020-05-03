@@ -8,7 +8,7 @@ import { EssentialsMatchMediaService } from '@essentials/services/match-media.se
 import { EssentialsMatSidenavHelperService } from '@essentials/directives/essentials-mat-sidenav/essentials-mat-sidenav.service';
 
 @Directive({
-    selector: '[fuseMatSidenavHelper]'
+    selector: '[essentialsMatSidenavHelper]'
 })
 export class EssentialsMatSidenavHelperDirective implements OnInit, OnDestroy
 {
@@ -16,7 +16,7 @@ export class EssentialsMatSidenavHelperDirective implements OnInit, OnDestroy
     isLockedOpen: boolean;
 
     @Input()
-    fuseMatSidenavHelper: string;
+    essentialsMatSidenavHelper: string;
 
     @Input()
     matIsLockedOpen: string;
@@ -56,7 +56,7 @@ export class EssentialsMatSidenavHelperDirective implements OnInit, OnDestroy
     ngOnInit(): void
     {
         // Register the sidenav to the service
-        this._essentialsMatSidenavHelperService.setSidenav(this.fuseMatSidenavHelper, this._matSidenav);
+        this._essentialsMatSidenavHelperService.setSidenav(this.essentialsMatSidenavHelper, this._matSidenav);
 
         if ( this.matIsLockedOpen && this._mediaObserver.isActive(this.matIsLockedOpen) )
         {
@@ -101,12 +101,12 @@ export class EssentialsMatSidenavHelperDirective implements OnInit, OnDestroy
 }
 
 @Directive({
-    selector: '[fuseMatSidenavToggler]'
+    selector: '[essentialsMatSidenavToggler]'
 })
 export class EssentialsMatSidenavTogglerDirective
 {
     @Input()
-    fuseMatSidenavToggler: string;
+    essentialsMatSidenavToggler: string;
 
     /**
      * Constructor
@@ -128,6 +128,6 @@ export class EssentialsMatSidenavTogglerDirective
     @HostListener('click')
     onClick(): void
     {
-        this._essentialsMatSidenavHelperService.getSidenav(this.fuseMatSidenavToggler).toggle();
+        this._essentialsMatSidenavHelperService.getSidenav(this.essentialsMatSidenavToggler).toggle();
     }
 }

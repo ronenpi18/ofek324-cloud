@@ -1,6 +1,6 @@
 import { Component, EventEmitter, forwardRef, Input, Output, ViewEncapsulation } from '@angular/core';
 
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 import { MatColors } from '@essentials/mat-colors';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
@@ -14,7 +14,7 @@ export const FUSE_MATERIAL_COLOR_PICKER_VALUE_ACCESSOR: any = {
     selector     : 'essentials-material-color-picker',
     templateUrl  : './material-color-picker.component.html',
     styleUrls    : ['./material-color-picker.component.scss'],
-    animations   : fuseAnimations,
+    animations   : essentialsAnimations,
     encapsulation: ViewEncapsulation.None,
     providers    : [FUSE_MATERIAL_COLOR_PICKER_VALUE_ACCESSOR]
 })

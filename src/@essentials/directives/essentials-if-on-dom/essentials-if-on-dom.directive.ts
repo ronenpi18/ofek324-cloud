@@ -1,7 +1,7 @@
 import { AfterContentChecked, Directive, ElementRef, TemplateRef, ViewContainerRef } from '@angular/core';
 
 @Directive({
-    selector: '[fuseIfOnDom]'
+    selector: '[essentialsIfOnDom]'
 })
 export class EssentialsIfOnDomDirective implements AfterContentChecked
 {

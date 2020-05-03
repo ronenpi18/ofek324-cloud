@@ -3,7 +3,7 @@ import { MediaObserver } from '@angular/flex-layout';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 import { EssentialsMatSidenavHelperService } from '@essentials/directives/essentials-mat-sidenav/essentials-mat-sidenav.service';
 
 import { ChatService } from 'app/main/apps/chat/chat.service';
@@ -13,7 +13,7 @@ import { ChatService } from 'app/main/apps/chat/chat.service';
     templateUrl  : './chats.component.html',
     styleUrls    : ['./chats.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class ChatChatsSidenavComponent implements OnInit, OnDestroy
 {

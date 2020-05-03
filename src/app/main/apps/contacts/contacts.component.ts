@@ -4,7 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, takeUntil } from 'rxjs/operators';
 
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 import { EssentialsSidebarService } from '@essentials/components/sidebar/sidebar.service';
 
 import { ContactsService } from 'app/main/apps/contacts/contacts.service';
@@ -15,7 +15,7 @@ import { ContactsContactFormDialogComponent } from 'app/main/apps/contacts/conta
     templateUrl  : './contacts.component.html',
     styleUrls    : ['./contacts.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class ContactsComponent implements OnInit, OnDestroy
 {

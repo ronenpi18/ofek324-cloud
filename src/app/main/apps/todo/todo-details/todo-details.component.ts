@@ -4,7 +4,7 @@ import { Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, takeUntil } from 'rxjs/operators';
 
 import { EssentialsUtils } from '@essentials/utils';
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 
 import { Todo } from 'app/main/apps/todo/todo.model';
 import { TodoService } from 'app/main/apps/todo/todo.service';
@@ -14,7 +14,7 @@ import { TodoService } from 'app/main/apps/todo/todo.service';
     templateUrl  : './todo-details.component.html',
     styleUrls    : ['./todo-details.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class TodoDetailsComponent implements OnInit, OnDestroy
 {

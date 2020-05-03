@@ -3,7 +3,7 @@ import { DataSource } from '@angular/cdk/collections';
 import { BehaviorSubject, Observable } from 'rxjs';
 import * as shape from 'd3-shape';
 
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 
 import { ProjectDashboardService } from 'app/main/apps/dashboards/project/project.service';
 import { EssentialsSidebarService } from '@essentials/components/sidebar/sidebar.service';
@@ -13,7 +13,7 @@ import { EssentialsSidebarService } from '@essentials/components/sidebar/sidebar
     templateUrl  : './project.component.html',
     styleUrls    : ['./project.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class ProjectDashboardComponent implements OnInit
 {

@@ -12,7 +12,7 @@ import { EssentialsConfigService } from '@essentials/services/config.service';
 export class EssentialsSearchBarComponent implements OnInit, OnDestroy
 {
     collapsed: boolean;
-    fuseConfig: any;
+    essentialsConfig: any;
 
     @Output()
     input: EventEmitter<any>;
@@ -51,7 +51,7 @@ export class EssentialsSearchBarComponent implements OnInit, OnDestroy
             .pipe(takeUntil(this._unsubscribeAll))
             .subscribe(
                 (config) => {
-                    this.fuseConfig = config;
+                    this.essentialsConfig = config;
                 }
             );
     }

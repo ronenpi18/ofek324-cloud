@@ -5,7 +5,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 import { EssentialsUtils } from '@essentials/utils';
 
 import { Product } from 'app/main/apps/e-commerce/product/product.model';
@@ -16,7 +16,7 @@ import { EcommerceProductService } from 'app/main/apps/e-commerce/product/produc
     templateUrl  : './product.component.html',
     styleUrls    : ['./product.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class EcommerceProductComponent implements OnInit, OnDestroy
 {

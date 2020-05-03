@@ -52,7 +52,7 @@
 
     <div class="children" [ngClass]="{'open': isOpen}">
 
-        <div class="{{fuseConfig.layout.navbar.primaryBackground}}">
+        <div class="{{essentialsConfig.layout.navbar.primaryBackground}}">
 
             <ng-container *ngFor="let item of item.children">
                 <essentials-nav-horizontal-item *ngIf="item.type=='item'" [item]="item"></essentials-nav-horizontal-item>

@@ -29,7 +29,7 @@ const routes = [
         component: DocsWorkingWithEssentialsDirectoryStructureComponent
     },
     {
-        path     : 'updating-fuse',
+        path     : 'updating-essentials',
         component: DocsWorkingWithEssentialsUpdatingEssentialsComponent
     },
     {
