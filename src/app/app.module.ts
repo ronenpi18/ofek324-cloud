@@ -14,7 +14,7 @@ import { EssentialsModule } from '@essentials/essentials.module';
 import { EssentialsSharedModule } from '@essentials/shared.module';
 import { EssentialsProgressBarModule, EssentialsSidebarModule, EssentialsThemeOptionsModule } from '@essentials/components';
 
-import { fuseConfig } from 'app/essentials-config';
+import { essentialsConfig } from 'app/essentials-config';
 
 import { FakeDbService } from 'app/fake-db/fake-db.service';
 import { AppComponent } from 'app/app.component';
@@ -87,7 +87,7 @@ const appRoutes: Routes = [
         MatIconModule,
 
         // @Essentials modules
-        EssentialsModule.forRoot(fuseConfig),
+        EssentialsModule.forRoot(essentialsConfig),
         EssentialsProgressBarModule,
         EssentialsSharedModule,
         EssentialsSidebarModule,

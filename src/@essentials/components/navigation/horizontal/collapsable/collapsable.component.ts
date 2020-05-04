@@ -2,18 +2,18 @@ import { Component, HostBinding, HostListener, Input, OnDestroy, OnInit } from '
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 import { EssentialsConfigService } from '@essentials/services/config.service';
 
 @Component({
     selector   : 'essentials-nav-horizontal-collapsable',
     templateUrl: './collapsable.component.html',
     styleUrls  : ['./collapsable.component.scss'],
-    animations : fuseAnimations
+    animations : essentialsAnimations
 })
 export class EssentialsNavHorizontalCollapsableComponent implements OnInit, OnDestroy
 {
-    fuseConfig: any;
+    essentialsConfig: any;
     isOpen = false;
 
     @HostBinding('class')
@@ -47,7 +47,7 @@ export class EssentialsNavHorizontalCollapsableComponent implements OnInit, OnDe
             .pipe(takeUntil(this._unsubscribeAll))
             .subscribe(
                 (config) => {
-                    this.fuseConfig = config;
+                    this.essentialsConfig = config;
                 }
             );
     }

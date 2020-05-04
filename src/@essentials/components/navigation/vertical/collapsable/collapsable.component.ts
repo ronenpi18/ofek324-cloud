@@ -4,14 +4,14 @@ import { merge, Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
 
 import { EssentialsNavigationItem } from '@essentials/types';
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 import { EssentialsNavigationService } from '@essentials/components/navigation/navigation.service';
 
 @Component({
     selector   : 'essentials-nav-vertical-collapsable',
     templateUrl: './collapsable.component.html',
     styleUrls  : ['./collapsable.component.scss'],
-    animations : fuseAnimations
+    animations : essentialsAnimations
 })
 export class EssentialsNavVerticalCollapsableComponent implements OnInit, OnDestroy
 {

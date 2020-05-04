@@ -3,7 +3,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import 'prismjs/components/prism-scss';
 import 'prismjs/components/prism-typescript';
 
-import { fuseAnimations } from '@essentials/animations/index';
+import { essentialsAnimations } from '@essentials/animations/index';
 import { EssentialsCopierService } from '@essentials/services/copier.service';
 
 import { EXAMPLE_COMPONENTS } from 'app/main/angular-material-elements/example-components';
@@ -21,7 +21,7 @@ export interface LiveExample
     templateUrl  : './example-viewer.html',
     styleUrls    : ['./example-viewer.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class ExampleViewerComponent implements AfterViewInit, OnDestroy
 {

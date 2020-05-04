@@ -159,7 +159,7 @@ $matHues: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, A100, A200, A400, A70
 @mixin generate-material-element-colors($classes, $contrast) {
 
     // If the contrast color is light...
-    $fuseForeground: (
+    $essentialsForeground: (
         base: white,
         text: white,
         hint-text: rgba(white, 0.5),
@@ -169,7 +169,7 @@ $matHues: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, A100, A200, A400, A70
     // If the contrast color is dark...
     @if ($contrast == 'dark') {
 
-        $fuseForeground: (
+        $essentialsForeground: (
             base: black,
             hint-text: rgba(black, 0.38),
             divider: rgba(black, 0.12),
@@ -181,32 +181,32 @@ $matHues: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, A100, A200, A400, A70
 
         // Native Input
         input[type="text"] {
-            color: map-get($fuseForeground, base);
+            color: map-get($essentialsForeground, base);
         }
 
         // Input
         .mat-form-field-label {
-            color: map-get($fuseForeground, hint-text);
+            color: map-get($essentialsForeground, hint-text);
         }
 
         .mat-form-field-underline {
-            background-color: map-get($fuseForeground, divider);
+            background-color: map-get($essentialsForeground, divider);
         }
 
         // Select
         .mat-select-trigger,
         .mat-select-arrow {
-            color: map-get($fuseForeground, hint-text);
+            color: map-get($essentialsForeground, hint-text);
         }
 
         .mat-select-underline {
-            background-color: map-get($fuseForeground, divider);
+            background-color: map-get($essentialsForeground, divider);
         }
 
         .mat-select-disabled .mat-select-value,
         .mat-select-arrow,
         .mat-select-trigger {
-            color: map-get($fuseForeground, hint-text);
+            color: map-get($essentialsForeground, hint-text);
         }
 
         .mat-select-content,
@@ -215,7 +215,7 @@ $matHues: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, A100, A200, A400, A70
         }
 
         .mat-select-value {
-            color: map-get($fuseForeground, text);
+            color: map-get($essentialsForeground, text);
         }
     }
 }

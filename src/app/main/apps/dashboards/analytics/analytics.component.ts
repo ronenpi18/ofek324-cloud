@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 
 import { AnalyticsDashboardService } from 'app/main/apps/dashboards/analytics/analytics.service';
 
@@ -9,7 +9,7 @@ import { AnalyticsDashboardService } from 'app/main/apps/dashboards/analytics/an
     templateUrl  : './analytics.component.html',
     styleUrls    : ['./analytics.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class AnalyticsDashboardComponent implements OnInit
 {

@@ -6,14 +6,14 @@ import {debounceTime, distinctUntilChanged, map, takeUntil} from "rxjs/operators
 import {DataSource} from "@angular/cdk/collections";
 import {EssentialsUtils} from "../../../../@essentials/utils";
 import {RequestsService} from "./requests.service";
-import {fuseAnimations} from "../../../../@essentials/animations";
+import {essentialsAnimations} from "../../../../@essentials/animations";
 
 @Component({
   selector: 'app-service-requests',
   templateUrl: './service-requests.component.html',
   styleUrls: ['./service-requests.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 
 export class ServiceRequestsComponent implements OnInit, OnDestroy

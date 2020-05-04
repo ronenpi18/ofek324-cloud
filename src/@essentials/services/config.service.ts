@@ -6,7 +6,7 @@ import { filter } from 'rxjs/operators';
 import * as _ from 'lodash';
 
 // Create the injection token for the custom settings
-export const FUSE_CONFIG = new InjectionToken('fuseCustomConfig');
+export const FUSE_CONFIG = new InjectionToken('essentialsCustomConfig');
 
 @Injectable({
     providedIn: 'root'

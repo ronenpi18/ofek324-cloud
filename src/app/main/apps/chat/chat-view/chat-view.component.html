@@ -10,7 +10,7 @@
 
                 <!-- RESPONSIVE CHATS BUTTON-->
                 <button mat-icon-button fxHide.gt-md class="responsive-chats-button mr-16"
-                        fuseMatSidenavToggler="chat-left-sidenav"
+                        essentialsMatSidenavToggler="chat-left-sidenav"
                         aria-label="chats button">
                     <mat-icon>chat</mat-icon>
                 </button>
@@ -18,7 +18,7 @@
 
                 <!-- CHAT CONTACT-->
                 <div class="chat-contact" fxLayout="row" fxLayoutAlign="start center"
-                     fuseMatSidenavToggler="chat-right-sidenav" (click)="selectContact()">
+                     essentialsMatSidenavToggler="chat-right-sidenav" (click)="selectContact()">
 
                     <div class="avatar-wrapper">
 
@@ -45,7 +45,7 @@
                 </button>
 
                 <mat-menu #contactMenu="matMenu">
-                    <button mat-menu-item fuseMatSidenavToggler="chat-right-sidenav" (click)="selectContact()">
+                    <button mat-menu-item essentialsMatSidenavToggler="chat-right-sidenav" (click)="selectContact()">
                         Contact Info
                     </button>
                 </mat-menu>

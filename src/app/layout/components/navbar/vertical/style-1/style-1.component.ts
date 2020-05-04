@@ -16,7 +16,7 @@ import { EssentialsSidebarService } from '@essentials/components/sidebar/sidebar
 })
 export class NavbarVerticalStyle1Component implements OnInit, OnDestroy
 {
-    fuseConfig: any;
+    essentialsConfig: any;
     navigation: any;
 
     // Private
@@ -107,7 +107,7 @@ export class NavbarVerticalStyle1Component implements OnInit, OnDestroy
         this._essentialsConfigService.config
             .pipe(takeUntil(this._unsubscribeAll))
             .subscribe((config) => {
-                this.fuseConfig = config;
+                this.essentialsConfig = config;
             });
 
         // Get current navigation

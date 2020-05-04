@@ -22,7 +22,7 @@ import { locale as navigationTurkish } from 'app/navigation/i18n/tr';
 })
 export class AppComponent implements OnInit, OnDestroy
 {
-    fuseConfig: any;
+    essentialsConfig: any;
     navigation: any;
 
     // Private
@@ -129,10 +129,10 @@ export class AppComponent implements OnInit, OnDestroy
             .pipe(takeUntil(this._unsubscribeAll))
             .subscribe((config) => {
 
-                this.fuseConfig = config;
+                this.essentialsConfig = config;
 
                 // Boxed
-                if ( this.fuseConfig.layout.width === 'boxed' )
+                if ( this.essentialsConfig.layout.width === 'boxed' )
                 {
                     this.document.body.classList.add('boxed');
                 }
@@ -152,7 +152,7 @@ export class AppComponent implements OnInit, OnDestroy
                     }
                 }
 
-                this.document.body.classList.add(this.fuseConfig.colorTheme);
+                this.document.body.classList.add(this.essentialsConfig.colorTheme);
             });
     }
 

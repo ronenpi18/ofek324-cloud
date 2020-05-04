@@ -3,7 +3,7 @@ import { FormControl } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, takeUntil } from 'rxjs/operators';
 
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 import { EssentialsSidebarService } from '@essentials/components/sidebar/sidebar.service';
 
 import { Todo } from 'app/main/apps/todo/todo.model';
@@ -14,7 +14,7 @@ import { TodoService } from 'app/main/apps/todo/todo.service';
     templateUrl  : './todo.component.html',
     styleUrls    : ['./todo.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class TodoComponent implements OnInit, OnDestroy
 {

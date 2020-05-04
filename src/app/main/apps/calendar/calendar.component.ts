@@ -6,7 +6,7 @@ import { startOfDay, isSameDay, isSameMonth } from 'date-fns';
 import { CalendarEvent, CalendarEventAction, CalendarEventTimesChangedEvent, CalendarMonthViewDay } from 'angular-calendar';
 
 import { EssentialsConfirmDialogComponent } from '@essentials/components/confirm-dialog/confirm-dialog.component';
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 
 import { CalendarService } from 'app/main/apps/calendar/calendar.service';
 import { CalendarEventModel } from 'app/main/apps/calendar/event.model';
@@ -17,7 +17,7 @@ import { CalendarEventFormDialogComponent } from 'app/main/apps/calendar/event-f
     templateUrl  : './calendar.component.html',
     styleUrls    : ['./calendar.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class CalendarComponent implements OnInit
 {

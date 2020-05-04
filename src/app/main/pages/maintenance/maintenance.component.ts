@@ -1,14 +1,14 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 import { EssentialsConfigService } from '@essentials/services/config.service';
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 
 @Component({
     selector     : 'maintenance',
     templateUrl  : './maintenance.component.html',
     styleUrls    : ['./maintenance.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class MaintenanceComponent
 {

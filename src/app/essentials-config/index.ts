@@ -8,7 +8,7 @@ import { EssentialsConfig } from '@essentials/types';
  * constructor method to learn more about changing these options per component basis.
  */
 
-export const fuseConfig: EssentialsConfig = {
+export const essentialsConfig: EssentialsConfig = {
     // Color themes can be defined in src/app/app.theme.scss
     colorTheme      : 'theme-default',
     customScrollbars: true,

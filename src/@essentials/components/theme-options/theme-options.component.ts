@@ -4,7 +4,7 @@ import { DOCUMENT } from '@angular/common';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { fuseAnimations } from '@essentials/animations';
+import { essentialsAnimations } from '@essentials/animations';
 import { EssentialsConfigService } from '@essentials/services/config.service';
 import { EssentialsNavigationService } from '@essentials/components/navigation/navigation.service';
 import { EssentialsSidebarService } from '@essentials/components/sidebar/sidebar.service';
@@ -14,11 +14,11 @@ import { EssentialsSidebarService } from '@essentials/components/sidebar/sidebar
     templateUrl  : './theme-options.component.html',
     styleUrls    : ['./theme-options.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class EssentialsThemeOptionsComponent implements OnInit, OnDestroy
 {
-    fuseConfig: any;
+    essentialsConfig: any;
     form: FormGroup;
 
     @HostBinding('class.bar-closed')
@@ -103,7 +103,7 @@ export class EssentialsThemeOptionsComponent implements OnInit, OnDestroy
             .subscribe((config) => {
 
                 // Update the stored config
-                this.fuseConfig = config;
+                this.essentialsConfig = config;
 
                 // Set the config form values without emitting an event
                 // so that we don't end up with an infinite loop
