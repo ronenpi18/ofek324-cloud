@@ -4,7 +4,7 @@ import { essentialsAnimations } from '@essentials/animations';
 import { MatColors } from '@essentials/mat-colors';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
-export const FUSE_MATERIAL_COLOR_PICKER_VALUE_ACCESSOR: any = {
+export const ESSENTIAL_MATERIAL_COLOR_PICKER_VALUE_ACCESSOR: any = {
     provide    : NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() => EssentialsMaterialColorPickerComponent),
     multi      : true
@@ -16,7 +16,7 @@ export const FUSE_MATERIAL_COLOR_PICKER_VALUE_ACCESSOR: any = {
     styleUrls    : ['./material-color-picker.component.scss'],
     animations   : essentialsAnimations,
     encapsulation: ViewEncapsulation.None,
-    providers    : [FUSE_MATERIAL_COLOR_PICKER_VALUE_ACCESSOR]
+    providers    : [ESSENTIAL_MATERIAL_COLOR_PICKER_VALUE_ACCESSOR]
 })
 export class EssentialsMaterialColorPickerComponent implements ControlValueAccessor
 {
