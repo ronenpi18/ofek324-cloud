@@ -4,7 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { fuseAnimations } from '@fuse/animations';
+import { essentialsAnimations } from '@essentials/animations';
 
 import { MailService } from 'app/main/apps/mail/mail.service';
 import { MailComposeDialogComponent } from 'app/main/apps/mail/dialogs/compose/compose.component';
@@ -14,7 +14,7 @@ import { MailComposeDialogComponent } from 'app/main/apps/mail/dialogs/compose/c
     templateUrl  : './main-sidebar.component.html',
     styleUrls    : ['./main-sidebar.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class MailMainSidebarComponent implements OnInit, OnDestroy
 {

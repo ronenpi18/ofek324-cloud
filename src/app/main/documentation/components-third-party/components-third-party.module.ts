@@ -5,7 +5,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
-import { FuseSharedModule } from '@fuse/shared.module';
+import { EssentialsSharedModule } from '@essentials/shared.module';
 
 import { GoogleMapsModule } from 'app/main/documentation/components-third-party/google-maps/google-maps.module';
 import { DocsComponentsThirdPartyNgxDatatableComponent } from 'app/main/documentation/components-third-party/datatable/ngx-datatable.component';
@@ -30,7 +30,7 @@ const routes = [
 
         NgxDatatableModule,
 
-        FuseSharedModule,
+        EssentialsSharedModule,
 
         GoogleMapsModule
     ]

@@ -53,7 +53,7 @@
                 <!-- Widget 2 -->
                 <div class="widget" fxFlex="100" fxFlex.gt-sm="33">
 
-                    <div class="fuse-card auto-width mb-32" [ngClass.gt-sm]="'mb-0 mr-32'">
+                    <div class="essentials-card auto-width mb-32" [ngClass.gt-sm]="'mb-0 mr-32'">
 
                         <div class="p-16 pb-0" fxLayout="row wrap" fxLayoutAlign="start end">
 
@@ -98,7 +98,7 @@
                 <!-- Widget 3 -->
                 <div class="widget" fxFlex="100" fxFlex.gt-sm="34">
 
-                    <div class="fuse-card auto-width mb-32" [ngClass.gt-sm]="'mb-0 mr-32'">
+                    <div class="essentials-card auto-width mb-32" [ngClass.gt-sm]="'mb-0 mr-32'">
 
                         <div class="p-16 pb-0" fxLayout="row wrap" fxLayoutAlign="start end">
 
@@ -143,7 +143,7 @@
                 <!-- Widget 4 -->
                 <div class="widget" fxFlex="100" fxFlex.gt-sm="33">
 
-                    <div class="fuse-card auto-width">
+                    <div class="essentials-card auto-width">
 
                         <div class="p-16 pb-0" fxLayout="row wrap" fxLayoutAlign="start end">
 
@@ -192,7 +192,7 @@
                 How many pages your users visit?
             </div>
 
-            <div class="fuse-card auto-width">
+            <div class="essentials-card auto-width">
 
                 <div class="position-relative p-24"
                      fxLayout="row" fxLayoutAlign="space-between center">
@@ -231,7 +231,7 @@
                 Where are your users?
             </div>
 
-            <div class="fuse-card auto-width p-16">
+            <div class="essentials-card auto-width p-16">
 
                 <agm-map class="h-640 w-100-p"
                          [minZoom]="2"
@@ -271,7 +271,7 @@
                         What are your top devices?
                     </div>
 
-                    <div class="fuse-card">
+                    <div class="essentials-card">
 
                         <div class="p-16">
                             <div class="h1 font-weight-300">Sessions by device</div>
@@ -279,7 +279,7 @@
 
                         <div class="h-200">
                             <ngx-charts-pie-chart
-                                *fuseIfOnDom
+                                *essentialsIfOnDom
                                 [scheme]="widgets.widget7.scheme"
                                 [results]="widgets.widget7.devices"
                                 [doughnut]="true">
@@ -343,7 +343,7 @@
                         How are your sales?
                     </div>
 
-                    <div class="fuse-card">
+                    <div class="essentials-card">
 
                         <div class="light-blue-600">
 
@@ -392,7 +392,7 @@
                             <mat-tab label="1DAY">
                                 <div class="h-200 my-16">
                                     <ngx-charts-line-chart
-                                        *fuseIfOnDom
+                                        *essentialsIfOnDom
                                         [scheme]="widgets.widget8.scheme"
                                         [results]="widgets.widget8.data"
                                         [xAxis]="false"
@@ -406,7 +406,7 @@
                             <mat-tab label="1WEEK">
                                 <div class="h-200 my-16">
                                     <ngx-charts-line-chart
-                                        *fuseIfOnDom
+                                        *essentialsIfOnDom
                                         [scheme]="widgets.widget8.scheme"
                                         [results]="widgets.widget8.data"
                                         [xAxis]="false"
@@ -420,7 +420,7 @@
                             <mat-tab label="1MONTH">
                                 <div class="h-200 my-16">
                                     <ngx-charts-line-chart
-                                        *fuseIfOnDom
+                                        *essentialsIfOnDom
                                         [scheme]="widgets.widget8.scheme"
                                         [results]="widgets.widget8.data"
                                         [xAxis]="false"
@@ -445,7 +445,7 @@
                         What are your top campaigns?
                     </div>
 
-                    <div class="fuse-card">
+                    <div class="essentials-card">
 
                         <div class="p-16" fxLayout="row" fxLayoutAlign="space-between center">
                             <div class="h1 pr-16">Top campaigns</div>

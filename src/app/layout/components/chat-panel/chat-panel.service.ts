@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { FuseUtils } from '@fuse/utils';
+import { EssentialsUtils } from '@essentials/utils';
 
 @Injectable()
 export class ChatPanelService
@@ -94,7 +94,7 @@ export class ChatPanelService
         return new Promise((resolve, reject) => {
 
             // Generate a new id
-            const chatId = FuseUtils.generateGUID();
+            const chatId = EssentialsUtils.generateGUID();
 
             // Prepare the chat object
             const chat = {

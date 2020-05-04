@@ -1,0 +1,17 @@
+@mixin essentials-countdown-theme($theme) {
+
+    $foreground: map-get($theme, foreground);
+
+    essentials-countdown {
+
+        .essentials-countdown {
+
+            .time {
+
+                .title {
+                    color: map-get($foreground, secondary-text);
+                }
+            }
+        }
+    }
+}

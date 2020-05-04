@@ -6,8 +6,8 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatIconModule} from "@angular/material/icon";
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
-import {FuseSharedModule} from "@fuse/shared.module";
-import {FuseSidebarModule} from "@fuse/components";
+import {EssentialsSharedModule} from "@essentials/shared.module";
+import {EssentialsSidebarModule} from "@essentials/components";
 import {MatListModule} from "@angular/material/list";
 import {RouterModule} from "@angular/router";
 import {AcademyCourseService} from "../../../apps/academy/course.service";
@@ -38,8 +38,8 @@ const routes = [
       MatIconModule,
       MatInputModule,
       MatSelectModule,
-      FuseSharedModule,
-      FuseSidebarModule,
+      EssentialsSharedModule,
+      EssentialsSidebarModule,
       MatListModule
   ],
     exports: [

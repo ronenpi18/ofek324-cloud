@@ -4,8 +4,8 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { FuseConfirmDialogComponent } from '@fuse/components/confirm-dialog/confirm-dialog.component';
-import { FusePerfectScrollbarDirective } from '@fuse/directives/fuse-perfect-scrollbar/fuse-perfect-scrollbar.directive';
+import { EssentialsConfirmDialogComponent } from '@essentials/components/confirm-dialog/confirm-dialog.component';
+import { EssentialsPerfectScrollbarDirective } from '@essentials/directives/essentials-perfect-scrollbar/essentials-perfect-scrollbar.directive';
 
 import { ScrumboardService } from 'app/main/apps/scrumboard/scrumboard.service';
 import { Card } from 'app/main/apps/scrumboard/card.model';
@@ -25,10 +25,10 @@ export class ScrumboardBoardListComponent implements OnInit, OnDestroy
     @Input()
     list;
 
-    @ViewChild(FusePerfectScrollbarDirective, {static: false})
-    listScroll: FusePerfectScrollbarDirective;
+    @ViewChild(EssentialsPerfectScrollbarDirective, {static: false})
+    listScroll: EssentialsPerfectScrollbarDirective;
 
-    confirmDialogRef: MatDialogRef<FuseConfirmDialogComponent>;
+    confirmDialogRef: MatDialogRef<EssentialsConfirmDialogComponent>;
 
     // Private
     private _unsubscribeAll: Subject<any>;
@@ -116,7 +116,7 @@ export class ScrumboardBoardListComponent implements OnInit, OnDestroy
      */
     removeList(listId): void
     {
-        this.confirmDialogRef = this._matDialog.open(FuseConfirmDialogComponent, {
+        this.confirmDialogRef = this._matDialog.open(EssentialsConfirmDialogComponent, {
             disableClose: false
         });
 

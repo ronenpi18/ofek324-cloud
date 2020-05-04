@@ -3,9 +3,9 @@ import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
-import { FuseSharedModule } from '@fuse/shared.module';
+import { EssentialsSharedModule } from '@essentials/shared.module';
 
-import { FuseCountdownModule, FuseHighlightModule, FuseMaterialColorPickerModule, FuseWidgetModule } from '@fuse/components';
+import { EssentialsCountdownModule, EssentialsHighlightModule, EssentialsMaterialColorPickerModule, EssentialsWidgetModule } from '@essentials/components';
 import { DocsComponentsCountdownComponent } from 'app/main/documentation/components/countdown/countdown.component';
 import { DocsComponentsHighlightComponent } from 'app/main/documentation/components/highlight/highlight.component';
 import { DocsComponentsMaterialColorPickerComponent } from 'app/main/documentation/components/material-color-picker/material-color-picker.component';
@@ -73,12 +73,12 @@ const routes = [
         MatButtonModule,
         MatIconModule,
 
-        FuseSharedModule,
+        EssentialsSharedModule,
 
-        FuseCountdownModule,
-        FuseHighlightModule,
-        FuseMaterialColorPickerModule,
-        FuseWidgetModule
+        EssentialsCountdownModule,
+        EssentialsHighlightModule,
+        EssentialsMaterialColorPickerModule,
+        EssentialsWidgetModule
     ]
 })
 export class ComponentsModule

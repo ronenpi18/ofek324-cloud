@@ -2,8 +2,8 @@ import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { fuseAnimations } from '@fuse/animations';
-import { FuseSidebarService } from '@fuse/components/sidebar/sidebar.service';
+import { essentialsAnimations } from '@essentials/animations';
+import { EssentialsSidebarService } from '@essentials/components/sidebar/sidebar.service';
 
 import { FileManagerService } from 'app/main/apps/file-manager/file-manager.service';
 
@@ -12,7 +12,7 @@ import { FileManagerService } from 'app/main/apps/file-manager/file-manager.serv
     templateUrl  : './file-manager.component.html',
     styleUrls    : ['./file-manager.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class FileManagerComponent implements OnInit, OnDestroy
 {
@@ -26,11 +26,11 @@ export class FileManagerComponent implements OnInit, OnDestroy
      * Constructor
      *
      * @param {FileManagerService} _fileManagerService
-     * @param {FuseSidebarService} _fuseSidebarService
+     * @param {EssentialsSidebarService} _essentialsSidebarService
      */
     constructor(
         private _fileManagerService: FileManagerService,
-        private _fuseSidebarService: FuseSidebarService
+        private _essentialsSidebarService: EssentialsSidebarService
     )
     {
         // Set the private defaults
@@ -75,6 +75,6 @@ export class FileManagerComponent implements OnInit, OnDestroy
      */
     toggleSidebar(name): void
     {
-        this._fuseSidebarService.getSidebar(name).toggleOpen();
+        this._essentialsSidebarService.getSidebar(name).toggleOpen();
     }
 }

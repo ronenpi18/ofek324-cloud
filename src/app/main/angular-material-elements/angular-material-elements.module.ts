@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { FuseSharedModule } from '@fuse/shared.module';
-import { FuseHighlightModule } from '@fuse/components/index';
-import { FuseWidgetModule } from '@fuse/components/widget/widget.module';
+import { EssentialsSharedModule } from '@essentials/shared.module';
+import { EssentialsHighlightModule } from '@essentials/components/index';
+import { EssentialsWidgetModule } from '@essentials/components/widget/widget.module';
 
 import { MaterialModule } from 'app/main/angular-material-elements/material.module';
 import { EXAMPLE_LIST } from 'app/main/angular-material-elements/example-components';
@@ -33,9 +33,9 @@ const routes: Routes = [
 
         MaterialModule,
 
-        FuseSharedModule,
-        FuseHighlightModule,
-        FuseWidgetModule
+        EssentialsSharedModule,
+        EssentialsHighlightModule,
+        EssentialsWidgetModule
     ],
     entryComponents: EXAMPLE_LIST,
 })

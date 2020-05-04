@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { FuseConfigService } from '@fuse/services/config.service';
+import { EssentialsConfigService } from '@essentials/services/config.service';
 import { navigation } from 'app/navigation/navigation';
 
 @Component({
@@ -13,7 +13,7 @@ import { navigation } from 'app/navigation/navigation';
 })
 export class HorizontalLayout1Component implements OnInit, OnDestroy
 {
-    fuseConfig: any;
+    essentialsConfig: any;
     navigation: any;
 
     // Private
@@ -22,10 +22,10 @@ export class HorizontalLayout1Component implements OnInit, OnDestroy
     /**
      * Constructor
      *
-     * @param {FuseConfigService} _fuseConfigService
+     * @param {EssentialsConfigService} _essentialsConfigService
      */
     constructor(
-        private _fuseConfigService: FuseConfigService
+        private _essentialsConfigService: EssentialsConfigService
     )
     {
         // Set the defaults
@@ -45,10 +45,10 @@ export class HorizontalLayout1Component implements OnInit, OnDestroy
     ngOnInit(): void
     {
         // Subscribe to config changes
-        this._fuseConfigService.config
+        this._essentialsConfigService.config
             .pipe(takeUntil(this._unsubscribeAll))
             .subscribe((config) => {
-                this.fuseConfig = config;
+                this.essentialsConfig = config;
             });
     }
 

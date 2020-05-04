@@ -11,8 +11,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-import { FuseSharedModule } from '@fuse/shared.module';
-import { FuseConfirmDialogModule, FuseSidebarModule } from '@fuse/components';
+import { EssentialsSharedModule } from '@essentials/shared.module';
+import { EssentialsConfirmDialogModule, EssentialsSidebarModule } from '@essentials/components';
 
 import { ContactsComponent } from 'app/main/apps/contacts/contacts.component';
 import { ContactsService } from 'app/main/apps/contacts/contacts.service';
@@ -53,9 +53,9 @@ const routes: Routes = [
         MatTableModule,
         MatToolbarModule,
 
-        FuseSharedModule,
-        FuseConfirmDialogModule,
-        FuseSidebarModule
+        EssentialsSharedModule,
+        EssentialsConfirmDialogModule,
+        EssentialsSidebarModule
     ],
     providers      : [
         ContactsService

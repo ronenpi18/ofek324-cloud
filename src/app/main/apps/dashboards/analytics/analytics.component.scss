@@ -1,4 +1,4 @@
-@import "src/@fuse/scss/fuse";
+@import "../../../../../@essentials/scss/essentials";
 
 #dashboard-analytics {
 
@@ -44,7 +44,7 @@
                 max-width: none;
             }
 
-            .fuse-card {
+            .essentials-card {
 
                 @include media-breakpoint('lt-lg') {
                     width: 100%;

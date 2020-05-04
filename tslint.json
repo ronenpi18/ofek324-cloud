@@ -13,7 +13,7 @@
             true,
             "attribute",
             [
-                "fuse",
+                "essentials",
                 ""
             ],
             "camelCase"
@@ -23,7 +23,7 @@
             "element",
             "attribute",
             [
-                "fuse",
+                "essentials",
                 ""
             ],
             [

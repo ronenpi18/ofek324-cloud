@@ -1,0 +1,30 @@
+@import "../components/countdown/countdown.theme";
+@import "../components/material-color-picker/material-color-picker.theme";
+@import "../components/search-bar/search-bar.theme";
+@import "../components/shortcuts/shortcuts.theme";
+@import "../components/sidebar/sidebar.theme";
+@import "../components/theme-options/theme-options.theme";
+@import "../components/widget/widget.theme";
+
+@mixin essentials-core-theme($theme) {
+
+    // Theming core styles
+    @include colors-theme($theme);
+    @include cards-theme($theme);
+    @include material-theme($theme);
+    @include page-layouts-theme($theme);
+    @include typography-theme($theme);
+
+    // Theming components
+    @include essentials-countdown-theme($theme);
+    @include essentials-search-bar-theme($theme);
+    @include essentials-shortcuts-theme($theme);
+    @include essentials-sidebar-theme($theme);
+    @include essentials-theme-options-theme($theme);
+    @include essentials-material-color-picker-theme($theme);
+    @include essentials-widget-theme($theme);
+
+    // Theming for 3rd party components
+    @include ngx-datatable-theme($theme);
+}
+

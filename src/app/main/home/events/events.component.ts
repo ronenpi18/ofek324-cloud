@@ -1,6 +1,6 @@
 import {Component, Input, OnDestroy, OnInit, ViewEncapsulation} from '@angular/core';
 
-import { fuseAnimations } from '@fuse/animations';
+import { essentialsAnimations } from '@essentials/animations';
 
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -11,7 +11,7 @@ import {HomeService} from "../home.service";
     templateUrl  : './events.component.html',
     styleUrls    : ['./events.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class EventsTimelineComponent implements OnInit, OnDestroy
 {

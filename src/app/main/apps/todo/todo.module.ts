@@ -11,8 +11,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { NgxDnDModule } from '@swimlane/ngx-dnd';
 
-import { FuseSharedModule } from '@fuse/shared.module';
-import { FuseSidebarModule } from '@fuse/components';
+import { EssentialsSharedModule } from '@essentials/shared.module';
+import { EssentialsSidebarModule } from '@essentials/components';
 
 import { TodoService } from 'app/main/apps/todo/todo.service';
 import { TodoComponent } from 'app/main/apps/todo/todo.component';
@@ -93,8 +93,8 @@ const routes: Routes = [
 
         NgxDnDModule,
 
-        FuseSharedModule,
-        FuseSidebarModule
+        EssentialsSharedModule,
+        EssentialsSidebarModule
     ],
     providers   : [
         TodoService

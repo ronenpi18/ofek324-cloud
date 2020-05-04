@@ -6,8 +6,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 
-import { FuseSharedModule } from '@fuse/shared.module';
-import { FuseCountdownModule } from '@fuse/components';
+import { EssentialsSharedModule } from '@essentials/shared.module';
+import { EssentialsCountdownModule } from '@essentials/components';
 
 import { ComingSoonComponent } from 'app/main/pages/coming-soon/coming-soon.component';
 
@@ -30,8 +30,8 @@ const routes = [
         MatIconModule,
         MatInputModule,
 
-        FuseSharedModule,
-        FuseCountdownModule
+        EssentialsSharedModule,
+        EssentialsCountdownModule
     ]
 })
 export class ComingSoonModule

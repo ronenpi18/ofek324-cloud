@@ -3,15 +3,15 @@ import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn,
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { FuseConfigService } from '@fuse/services/config.service';
-import { fuseAnimations } from '@fuse/animations';
+import { EssentialsConfigService } from '@essentials/services/config.service';
+import { essentialsAnimations } from '@essentials/animations';
 
 @Component({
     selector     : 'register-2',
     templateUrl  : './register-2.component.html',
     styleUrls    : ['./register-2.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class Register2Component implements OnInit, OnDestroy
 {
@@ -21,12 +21,12 @@ export class Register2Component implements OnInit, OnDestroy
     private _unsubscribeAll: Subject<any>;
 
     constructor(
-        private _fuseConfigService: FuseConfigService,
+        private _essentialsConfigService: EssentialsConfigService,
         private _formBuilder: FormBuilder
     )
     {
         // Configure the layout
-        this._fuseConfigService.config = {
+        this._essentialsConfigService.config = {
             layout: {
                 navbar   : {
                     hidden: true

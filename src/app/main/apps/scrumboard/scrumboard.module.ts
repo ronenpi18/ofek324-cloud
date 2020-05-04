@@ -17,8 +17,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { NgxDnDModule } from '@swimlane/ngx-dnd';
 
-import { FuseSharedModule } from '@fuse/shared.module';
-import { FuseConfirmDialogModule, FuseMaterialColorPickerModule } from '@fuse/components';
+import { EssentialsSharedModule } from '@essentials/shared.module';
+import { EssentialsConfirmDialogModule, EssentialsMaterialColorPickerModule } from '@essentials/components';
 
 import { BoardResolve, ScrumboardService } from 'app/main/apps/scrumboard/scrumboard.service';
 import { ScrumboardComponent } from 'app/main/apps/scrumboard/scrumboard.component';
@@ -91,9 +91,9 @@ const routes: Routes = [
 
         NgxDnDModule,
 
-        FuseSharedModule,
-        FuseConfirmDialogModule,
-        FuseMaterialColorPickerModule
+        EssentialsSharedModule,
+        EssentialsConfirmDialogModule,
+        EssentialsMaterialColorPickerModule
     ],
     providers      : [
         ScrumboardService,

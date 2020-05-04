@@ -4,16 +4,16 @@ import {MatSort} from "@angular/material/sort";
 import {BehaviorSubject, fromEvent, merge, Observable, Subject} from "rxjs";
 import {debounceTime, distinctUntilChanged, map, takeUntil} from "rxjs/operators";
 import {DataSource} from "@angular/cdk/collections";
-import {FuseUtils} from "../../../../@fuse/utils";
+import {EssentialsUtils} from "../../../../@essentials/utils";
 import {RequestsService} from "./requests.service";
-import {fuseAnimations} from "../../../../@fuse/animations";
+import {essentialsAnimations} from "../../../../@essentials/animations";
 
 @Component({
   selector: 'app-service-requests',
   templateUrl: './service-requests.component.html',
   styleUrls: ['./service-requests.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 
 export class ServiceRequestsComponent implements OnInit, OnDestroy
@@ -183,7 +183,7 @@ export class FilesDataSource extends DataSource<any>
         {
             return data;
         }
-        return FuseUtils.filterArrayByString(data, this.filter);
+        return EssentialsUtils.filterArrayByString(data, this.filter);
     }
 
     /**

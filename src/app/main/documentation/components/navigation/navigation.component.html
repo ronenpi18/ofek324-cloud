@@ -19,23 +19,23 @@
     <div class="content p-24">
 
         <p>
-            <code>fuse-navigation</code> is a custom built Fuse component allows you to create a multi-level collapsable
+            <code>essentials-navigation</code> is a custom built Essentials component allows you to create a multi-level collapsable
             navigation. It has built-in support for translations using <b>ngx-translate</b> module.
         </p>
 
         <div class="section-title">Usage</div>
         <p class="py-8">
-            <fuse-highlight lang="html">
+            <essentials-highlight lang="html">
                 <textarea #source>
-                    <fuse-navigation [navigation]="navigation" [layout]="'vertical'"></fuse-navigation>
+                    <essentials-navigation [navigation]="navigation" [layout]="'vertical'"></essentials-navigation>
                 </textarea>
-            </fuse-highlight>
+            </essentials-highlight>
         </p>
 
         <div class="my-48">
             <h2>[navigation]</h2>
             <p class="py-8">
-                <code>&lt;fuse-navigation&gt;&lt;/fuse-navigation&gt;</code> uses a json file to populate
+                <code>&lt;essentials-navigation&gt;&lt;/essentials-navigation&gt;</code> uses a json file to populate
                 the entire navigation. It supports three different navigation items; <b>Group</b>,
                 <b>Collapsable</b> and <b>Item</b>. These items can be mixed and matched to create unique and complex
                 navigation layouts.
@@ -63,38 +63,38 @@
         </p>
 
         <p class="py-8">
-            <fuse-highlight lang="ts">
+            <essentials-highlight lang="ts">
                 <textarea #source>
                     // Get your navigation array from database or file
                     this.navigation = [...]
 
                     // Register the navigation to the service
-                    this._fuseNavigationService.register('main', this.navigation);
+                    this._essentialsNavigationService.register('main', this.navigation);
 
                     // Set the main navigation as our current navigation
-                    this._fuseNavigationService.setCurrentNavigation('main');
+                    this._essentialsNavigationService.setCurrentNavigation('main');
                 </textarea>
-            </fuse-highlight>
+            </essentials-highlight>
         </p>
 
         <p class="py-8">
             Once you register your navigation like this, you no longer need to provide the <b>[navigation]</b> input
-            while using the <code>fuse-navigation</code>:
+            while using the <code>essentials-navigation</code>:
         </p>
 
         <p class="py-8">
-            <fuse-highlight lang="html">
+            <essentials-highlight lang="html">
                 <textarea #source>
-                    <fuse-navigation [layout]="'vertical'"></fuse-navigation>
+                    <essentials-navigation [layout]="'vertical'"></essentials-navigation>
                 </textarea>
-            </fuse-highlight>
+            </essentials-highlight>
         </p>
 
         <div class="main-title">Navigation item types</div>
 
         <div class="section-title">Grouping</div>
         <p class="py-8">
-            <fuse-highlight lang="json">
+            <essentials-highlight lang="json">
                 <textarea #source>
                     {
                         'id'       : 'components',
@@ -111,12 +111,12 @@
                         ]
                     }
                 </textarea>
-            </fuse-highlight>
+            </essentials-highlight>
         </p>
 
         <div class="section-title">Collapsable</div>
         <p class="py-8">
-            <fuse-highlight lang="json">
+            <essentials-highlight lang="json">
                 <textarea #source>
                     {
                         'id'       : 'datatables',
@@ -134,12 +134,12 @@
                         ]
                     },
                 </textarea>
-            </fuse-highlight>
+            </essentials-highlight>
         </p>
 
         <div class="section-title">Item</div>
         <p class="py-8">
-            <fuse-highlight lang="json">
+            <essentials-highlight lang="json">
                 <textarea #source>
                     {
                         'id'       : 'countdown',
@@ -150,7 +150,7 @@
                         'url'      : '/components/countdown'
                     },
                 </textarea>
-            </fuse-highlight>
+            </essentials-highlight>
         </p>
 
         <div class="main-title">Vertical Navigation Default Folded Status</div>
@@ -159,7 +159,7 @@
         </p>
         <p>
             Find the layout that you want to edit from <b>app/layout/vertical/</b> directory. Edit the layout's html
-            file and look for the <code>[folded]</code> attribute on <code>fuse-sidebar</code> components.
+            file and look for the <code>[folded]</code> attribute on <code>essentials-sidebar</code> components.
         </p>
         <p>
             Assigning <code>true</code> to that attribute will make the vertical navigation folded by default.
@@ -181,7 +181,7 @@
         </div>
 
         <p class="py-8 mb-48">
-            <fuse-highlight lang="typescript">
+            <essentials-highlight lang="typescript">
                 <textarea #source>
                     hidden = false;
 
@@ -191,12 +191,12 @@
                         this.hidden = !this.hidden;
 
                         // Update the calendar menu item
-                        this._fuseNavigationService.updateNavigationItem('calendar', {
+                        this._essentialsNavigationService.updateNavigationItem('calendar', {
                             hidden: this.hidden
                         });
                     }
                 </textarea>
-            </fuse-highlight>
+            </essentials-highlight>
         </p>
 
         <div class="section-title">Update navigation item on-the-fly</div>
@@ -208,19 +208,19 @@
         </div>
 
         <p class="py-8 mb-48">
-            <fuse-highlight lang="typescript">
+            <essentials-highlight lang="typescript">
                 <textarea #source>
                     updateMailBadge()
                     {
                         // Update the badge title
-                        this._fuseNavigationService.updateNavigationItem('mail', {
+                        this._essentialsNavigationService.updateNavigationItem('mail', {
                             badge: {
                                 title: 35
                             }
                         });
                     }
                 </textarea>
-            </fuse-highlight>
+            </essentials-highlight>
         </p>
 
         <div class="section-title">Add a subitem to the Calendar nav item</div>
@@ -232,7 +232,7 @@
         </div>
 
         <p class="py-8 mb-48">
-            <fuse-highlight lang="typescript">
+            <essentials-highlight lang="typescript">
                 <textarea #source>
                     addSubitemToCalendar()
                     {
@@ -244,7 +244,7 @@
                             url  : '/apps/calendar'
                         };
 
-                        this._fuseNavigationService.updateNavigationItem('calendar', {
+                        this._essentialsNavigationService.updateNavigationItem('calendar', {
                             type: 'collapsable',
                             children: [
                                 newNavItem
@@ -252,7 +252,7 @@
                         });
                     }
                 </textarea>
-            </fuse-highlight>
+            </essentials-highlight>
         </p>
 
         <div class="section-title">Add a nav item with custom function</div>
@@ -264,7 +264,7 @@
         </div>
 
         <p class="py-8 mb-48">
-            <fuse-highlight lang="typescript">
+            <essentials-highlight lang="typescript">
                 <textarea #source>
                     addNavItemWithCustomFunction()
                     {
@@ -279,10 +279,10 @@
                         };
 
                         // Add the new nav item at the beginning of the navigation
-                        this._fuseNavigationService.addNavigationItem(newNavItem, 'start');
+                        this._essentialsNavigationService.addNavigationItem(newNavItem, 'start');
                     }
                 </textarea>
-            </fuse-highlight>
+            </essentials-highlight>
         </p>
 
         <div class="section-title">Remove the Dashboards menu item</div>
@@ -294,14 +294,14 @@
         </div>
 
         <p class="py-8 mb-48">
-            <fuse-highlight lang="typescript">
+            <essentials-highlight lang="typescript">
                 <textarea #source>
                     removeDashboards(): void
                     {
-                        this._fuseNavigationService.removeNavigationItem('dashboards');
+                        this._essentialsNavigationService.removeNavigationItem('dashboards');
                     }
                 </textarea>
-            </fuse-highlight>
+            </essentials-highlight>
         </p>
 
         <div class="section-title">Register a new navigation and toggle to it</div>
@@ -313,7 +313,7 @@
         </div>
 
         <p class="py-8">
-            <fuse-highlight lang="typescript">
+            <essentials-highlight lang="typescript">
                 <textarea #source>
                     registerNewNavigationAndToggle(): void
                     {
@@ -365,13 +365,13 @@
                         ];
 
                         // Register the new navigation
-                        this._fuseNavigationService.register('admin-nav', adminNav);
+                        this._essentialsNavigationService.register('admin-nav', adminNav);
 
                         // Set the current navigation
-                        this._fuseNavigationService.setCurrentNavigation('admin-nav');
+                        this._essentialsNavigationService.setCurrentNavigation('admin-nav');
                     }
                 </textarea>
-            </fuse-highlight>
+            </essentials-highlight>
         </p>
 
     </div>

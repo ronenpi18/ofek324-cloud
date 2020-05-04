@@ -3,8 +3,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import 'prismjs/components/prism-scss';
 import 'prismjs/components/prism-typescript';
 
-import { fuseAnimations } from '@fuse/animations/index';
-import { FuseCopierService } from '@fuse/services/copier.service';
+import { essentialsAnimations } from '@essentials/animations/index';
+import { EssentialsCopierService } from '@essentials/services/copier.service';
 
 import { EXAMPLE_COMPONENTS } from 'app/main/angular-material-elements/example-components';
 
@@ -21,7 +21,7 @@ export interface LiveExample
     templateUrl  : './example-viewer.html',
     styleUrls    : ['./example-viewer.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class ExampleViewerComponent implements AfterViewInit, OnDestroy
 {
@@ -38,12 +38,12 @@ export class ExampleViewerComponent implements AfterViewInit, OnDestroy
      * Constructor
      *
      * @param {MatSnackBar} _matSnackBar
-     * @param {FuseCopierService} _fuseCopierService
+     * @param {EssentialsCopierService} _essentialsCopierService
      * @param {ComponentFactoryResolver} _componentFactoryResolver
      */
     constructor(
         private _matSnackBar: MatSnackBar,
-        private _fuseCopierService: FuseCopierService,
+        private _essentialsCopierService: EssentialsCopierService,
         private _componentFactoryResolver: ComponentFactoryResolver
     )
     {
@@ -140,7 +140,7 @@ export class ExampleViewerComponent implements AfterViewInit, OnDestroy
      */
     copySource(text: string): void
     {
-        if ( this._fuseCopierService.copyText(text) )
+        if ( this._essentialsCopierService.copyText(text) )
         {
             this._matSnackBar.open('Code copied', '', {duration: 2500});
         }

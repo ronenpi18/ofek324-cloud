@@ -1,14 +1,14 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import * as shape from 'd3-shape';
 
-import { fuseAnimations } from '@fuse/animations';
+import { essentialsAnimations } from '@essentials/animations';
 
 @Component({
     selector     : 'cards',
     templateUrl  : './cards.component.html',
     styleUrls    : ['./cards.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations   : essentialsAnimations
 })
 export class CardsComponent
 {

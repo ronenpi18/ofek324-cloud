@@ -5,7 +5,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 
-import { FuseSharedModule } from '@fuse/shared.module';
+import { EssentialsSharedModule } from '@essentials/shared.module';
 
 import { ProfileService } from 'app/main/pages/profile/profile.service';
 import { ProfileComponent } from 'app/main/pages/profile/profile.component';
@@ -42,7 +42,7 @@ const routes = [
         MatIconModule,
         MatTabsModule,
 
-        FuseSharedModule,
+        EssentialsSharedModule,
         ServiceRequestsModule
     ],
     providers   : [
