@@ -51,7 +51,6 @@ export class FaqService implements Resolve<any>
      */
     getFaqs(): Promise<any>
     {
-        // return this._httpClient.get<[]>("http://localhost:8082/staticData/faq")
         return new Promise((resolve, reject) => {
             this._httpClient.get(this.globals.baseAPI + '/staticData/faq')
                 .subscribe((response: any) => {
