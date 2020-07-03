@@ -1,6 +1,6 @@
 import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
 
-import { FUSE_CONFIG } from '@essentials/services/config.service';
+import { ESSENTIAL_CONFIG } from '@essentials/services/config.service';
 
 @NgModule()
 export class EssentialsModule
@@ -19,7 +19,7 @@ export class EssentialsModule
             ngModule : EssentialsModule,
             providers: [
                 {
-                    provide : FUSE_CONFIG,
+                    provide : ESSENTIAL_CONFIG,
                     useValue: config
                 }
             ]
