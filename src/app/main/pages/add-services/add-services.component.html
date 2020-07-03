@@ -1,0 +1,201 @@
+<div id="add-services" class="page-layout simple">
+    <!-- HEADER -->
+    <div class="header p-16 p-sm-24" fxLayout="column" fxLayoutAlign="center center">
+
+        <div class="hero-text">
+            <h1 dir="rtl">
+                הוסיפו את השירות שלכם לענן!
+            </h1>
+
+            <h3 dir="rtl" [@animate]="{value:'*',params:{delay:'100ms', y:'25px'}}">
+                תוך מילוי שאלון מאוד פשוט, תוכלו לשלב את השירות שלכם בענן של היחידה.
+                הדרך לעתיד מתחילה בהווה.
+            </h3>
+        </div>
+    </div>
+    <!-- HEADER -->
+
+
+    <div class="content p-24">
+        <div class="vertical-stepper-wrapper">
+
+            <!-- VERTICAL STEPPER EXAMPLE -->
+            <mat-vertical-stepper class="mat-elevation-z4" [linear]="true">
+
+                <mat-step [stepControl]="aboutYouStep1">
+
+                    <form fxLayout="column" [formGroup]="aboutYouStep1">
+
+                        <ng-template matStepLabel>Fill out some details of yours, so we can identify you as a true member of Tashtiot</ng-template>
+
+                        <div fxFlex="1 0 auto" fxLayout="column">
+
+                            <mat-form-field appearance="outline" fxFlex="100">
+                                <mat-label>First Name</mat-label>
+                                <input matInput formControlName="firstName" required>
+                                <mat-error>First Name is required!</mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline" fxFlex="100">
+                                <mat-label>Last Name</mat-label>
+                                <input matInput formControlName="lastName" required>
+                                <mat-error>Last Name is required!</mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline" fxFlex="100">
+                                <mat-label>Active Directory Group</mat-label>
+                                <input matInput formControlName="ADGroup" required>
+                                <mat-error>AD is required!</mat-error>
+                            </mat-form-field>
+
+                        </div>
+
+                        <div fxLayout="row" fxLayoutAlign="center center">
+                            <button mat-raised-button matStepperNext type="button" color="accent">
+                                Next
+                            </button>
+                        </div>
+
+                    </form>
+
+                </mat-step>
+
+                <mat-step [stepControl]="aboutYourServiceStep2">
+
+                    <form fxLayout="column" [formGroup]="aboutYourServiceStep2">
+
+                        <ng-template matStepLabel>Fill out details about your service</ng-template>
+
+                        <div fxFlex="1 0 auto" fxLayout="column">
+
+                            <mat-form-field appearance="outline" fxFlex="100">
+                                <mat-label>Service Name</mat-label>
+                                <textarea matInput formControlName="serviceName" required>
+                                </textarea>
+                                <mat-error>Service Name is required!</mat-error>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline" fxFlex="100">
+                                <mat-label>Git URL</mat-label>
+                                <textarea matInput formControlName="gitURL" required>
+                                </textarea>
+                                <mat-error>Git is required!</mat-error>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline" fxFlex="100">
+                                <mat-label>Description</mat-label>
+                                <textarea matInput formControlName="description" required>
+                                </textarea>
+                                <mat-error>Desc is required!</mat-error>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline" fxFlex="100">
+                                <mat-label>Technology</mat-label>
+                                <mat-select formControlName="tech" required>
+                                    <mat-option [value]="'ansible'">
+                                        Ansible/PlayBook
+                                    </mat-option>
+                                    <mat-option [value]="'restapi'">
+                                        REST-API
+                                    </mat-option>
+
+                                </mat-select>
+                                <mat-icon matSuffix class="secondary-text">outlined_flag</mat-icon>
+                                <mat-error>Tech is required!</mat-error>
+                            </mat-form-field>
+
+                        </div>
+
+                        <div fxLayout="row" fxLayoutAlign="center center">
+                            <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+                                Previous
+                            </button>
+                            <button mat-raised-button matStepperNext type="button" color="accent">
+                                Next
+                            </button>
+                        </div>
+
+                    </form>
+
+                </mat-step>
+
+                <mat-step [stepControl]="aboutYourConsumersStep3">
+
+                    <form fxLayout="column" [formGroup]="aboutYourConsumersStep3">
+
+                        <ng-template matStepLabel>Fill out your address</ng-template>
+
+                        <div fxFlex="1 0 auto" fxLayout="column">
+                            <mat-form-field appearance="outline" fxFlex="100">
+                                <mat-label>Do you need input values?</mat-label>
+                                <mat-select formControlName="isUserFields" required>
+                                    <mat-option [value]="'yes'">
+                                        yes
+                                    </mat-option>
+                                    <mat-option [value]="'no'">
+                                        no
+                                    </mat-option>
+
+                                </mat-select>
+                                <mat-icon matSuffix class="secondary-text">outlined_flag</mat-icon>
+                                <mat-error>answer is required!</mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline" fxFlex="100">
+                                <mat-label>fields</mat-label>
+                                <input matInput formControlName="userFields" required>
+                                <mat-error>you said it required! so.. IT is required!</mat-error>
+                            </mat-form-field>
+
+<!--                            <mat-form-field appearance="outline" fxFlex="100">-->
+<!--                                <mat-label>State</mat-label>-->
+<!--                                <input matInput formControlName="state" required>-->
+<!--                                <mat-error>State is required!</mat-error>-->
+<!--                            </mat-form-field>-->
+
+<!--                            <mat-form-field appearance="outline" fxFlex="100">-->
+<!--                                <mat-label>Postal Code</mat-label>-->
+<!--                                <input matInput #postalCode3 formControlName="postalCode"-->
+<!--                                       maxlength="5" required>-->
+<!--                                <mat-hint align="end">{{postalCode3.value.length}} / 5</mat-hint>-->
+<!--                                <mat-error>Postal Code is required!</mat-error>-->
+<!--                            </mat-form-field>-->
+
+                        </div>
+
+                        <div fxLayout="row" fxLayoutAlign="center center">
+                            <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+                                Previous
+                            </button>
+                            <button mat-raised-button matStepperNext type="button" color="accent">
+                                Next
+                            </button>
+                        </div>
+
+                    </form>
+
+                </mat-step>
+
+                <mat-step>
+
+                    <ng-template matStepLabel>Done</ng-template>
+
+                    <div class="h2 m-16" fxLayout="row" fxLayoutAlign="center center">
+                        Thank your for filling out our service application. your service will be ready shortly.
+                    </div>
+
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+                            Previous
+                        </button>
+                        <button mat-raised-button type="button" color="accent" (click)="finishVerticalStepper()">
+                            Finish
+                        </button>
+                    </div>
+
+                </mat-step>
+
+            </mat-vertical-stepper>
+            <!-- / VERTICAL STEPPER EXAMPLE -->
+
+        </div>
+
+    </div>
+</div>

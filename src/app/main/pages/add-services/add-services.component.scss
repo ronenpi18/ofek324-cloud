@@ -1,0 +1,55 @@
+@import "../../../../@essentials/scss/essentials";
+#add-services {
+    .header {
+        position: relative;
+        flex: 1 0 auto;
+        height: 300px;
+        max-height: 300px;
+        text-align: center;
+        overflow: hidden;
+        background: rgb(66, 103, 178);
+
+        @include media-breakpoint('xs') {
+            height: 240px;
+            padding: 16px;
+        }
+
+        .hero-text {
+            color: white;
+            h1 {
+                font-size: 40px;
+                font-weight: 300;
+                letter-spacing: 0.01em;
+                text-align: center;
+                margin-top: 0;
+                margin-bottom: 16px;
+
+                @include media-breakpoint('xs') {
+                    font-size: 24px;
+                }
+            }
+
+            h3 {
+                max-width: 480px;
+                text-align: center;
+                font-weight: 300;
+                letter-spacing: 0.03em;
+                margin: 0;
+
+                @include media-breakpoint('xs') {
+                    font-size: 14px;
+                }
+            }
+            .hero-icon {
+                position: absolute;
+                top: -64px;
+                //left: 0px;
+                opacity: 0.1;
+                font-size: 512px !important;
+                width: 512px !important;
+                height: 512px !important;
+                color: white;
+            }
+        }
+    }
+}

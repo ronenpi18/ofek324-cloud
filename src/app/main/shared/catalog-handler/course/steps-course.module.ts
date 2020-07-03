@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {AcademyCourseComponent} from "./course.component";
-import {MatButtonModule} from "@angular/material/button";
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {MatIconModule} from "@angular/material/icon";
-import {MatInputModule} from "@angular/material/input";
-import {MatSelectModule} from "@angular/material/select";
-import {EssentialsSharedModule} from "@essentials/shared.module";
-import {EssentialsSidebarModule} from "@essentials/components";
-import {MatListModule} from "@angular/material/list";
-import {RouterModule} from "@angular/router";
-import {AcademyCourseService} from "../../../apps/academy/course.service";
-import {HomeService} from "../../../home/home.service";
-import {AcademyCoursesService} from "../../../apps/academy/courses.service";
+import {AcademyCourseComponent} from './course.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {EssentialsSharedModule} from '@essentials/shared.module';
+import {EssentialsSidebarModule} from '@essentials/components';
+import {MatListModule} from '@angular/material/list';
+import {RouterModule} from '@angular/router';
+import {AcademyCourseService} from '../../../apps/academy/course.service';
+import {HomeService} from '../../../home/home.service';
+import {AcademyCoursesService} from '../../../apps/academy/courses.service';
 
 
 const routes = [
@@ -45,7 +45,7 @@ const routes = [
     exports: [
         AcademyCourseComponent
     ],
-    providers:[
+    providers: [
         HomeService,
         AcademyCoursesService,
         AcademyCourseService

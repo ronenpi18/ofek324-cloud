@@ -22,6 +22,8 @@ import { SearchClassicModule } from 'app/main/pages/search/classic/search-classi
 import { SearchModernModule } from 'app/main/pages/search/modern/search-modern.module';
 import { FaqModule } from 'app/main/pages/faq/faq.module';
 import { KnowledgeBaseModule } from 'app/main/pages/knowledge-base/knowledge-base.module';
+import { AddServicesComponent } from './add-services/add-services.component';
+import {AddServicesModule} from './add-services/add-services.module';
 
 @NgModule({
     imports: [
@@ -63,6 +65,9 @@ import { KnowledgeBaseModule } from 'app/main/pages/knowledge-base/knowledge-bas
 
         // Faq
         FaqModule,
+
+        // add services
+        AddServicesModule,
 
         // Knowledge base
         KnowledgeBaseModule

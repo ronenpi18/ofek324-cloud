@@ -50,11 +50,25 @@ export const navigation: EssentialsNavigation[] = [
                 url  : '/pages/knowledge-base'
             },
             {
+                id   : 'forms',
+                title: 'Forms',
+                type : 'item',
+                icon : 'web_asset',
+                url  : '/ui/forms'
+            },
+            {
                 id   : 'faq',
                 title: 'Faq',
                 type : 'item',
                 icon : 'help',
                 url  : '/pages/faq'
+            },
+            {
+                id   : 'add_services',
+                title: 'Add Services',
+                type : 'item',
+                icon : 'add',
+                url  : '/pages/add-services'
             },
     //         {
     //             id       : 'dashboards',
